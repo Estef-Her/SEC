@@ -5,9 +5,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script src="Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="Scripts/jquery.validate.js"></script>
     <title></title>
 </head>
 <body style="height: 364px">
+    <script type="text/javascript">
+       $(document).ready(function () {
+       $("#form1").validate({
+           rules: {
+               'txtCapital': { required: true, number: true, minlength: 1 },
+               'txtNacim': { required : true , number :true , minlength: 4, maxlength:4}
+           },
+           messages: {
+               'txtCapital': {
+                   required:  'Debe digitar un monto',
+                   number: 'Debe ingresar datos numericos'
+               },
+               'txtNacim': {
+                   required:  'Debe digitar un monto',
+                   number: 'Debe ingresar datos numericos'
+               }
+           },
+ 
+          
+       });
+   });
+    </script>
     <form id="form1" runat="server">
         <div>
         </div>
