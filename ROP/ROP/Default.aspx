@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+<link href="/Content/style.css" rel="stylesheet" /> 
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <script src="Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
