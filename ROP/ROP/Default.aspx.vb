@@ -13,11 +13,12 @@ Public Class ROP
 
     'Limpia/Resetea todos los campos'
     Protected Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-
         txtNacim.Text = ""
         txtCapital.Text = ""
         txtEstimado.Text = ""
         radioListSexo.ClearSelection()
+        Label4.Visible = False
+        txtEstimado.Visible = False
 
     End Sub
 
@@ -116,8 +117,11 @@ Public Class ROP
         Dim capital = CDbl(txtCapital.Text)
         Dim resultadoF = capital / VANU
         Dim resultadoFinal = Format(resultadoF, "0.0000")
-
         txtEstimado.Text = CStr(resultadoFinal)
+        Label4.Visible = True
+        txtEstimado.Visible = True
+
+
     End Sub
 
 End Class

@@ -1,0 +1,5 @@
+Cambios para la calculadora del ROP
+-Utilizar javascript para calculos, para que no haya que recargar.
+-Agregar las notas de que es un estimado.
+-Corregir el bug de que no deja limpiar cuando hay datos erroneos.
+-Poner el campos y etiquetas en rojo cuando hay datos erroneos
