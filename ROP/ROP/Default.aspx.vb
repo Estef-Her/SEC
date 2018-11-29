@@ -117,7 +117,7 @@ Public Class ROP
         Dim capital = CDbl(txtCapital.Text)
         Dim resultadoF = capital / VANU
         Dim resultadoFinal = Format(resultadoF, "0.0000")
-        txtEstimado.Text = CStr(resultadoFinal)
+        txtEstimado.Text = CStr("₡" + resultadoFinal)
         Label4.Visible = True
         txtEstimado.Visible = True
 

@@ -45,24 +45,24 @@
                 <ContentTemplate>
                     <div>
                         <p>
-                            <asp:Label ID="Label1" runat="server" Text="Año de Nacimiento:"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="Fecha de nacimiento:"></asp:Label>
                             <asp:TextBox ID="txtNacim" runat="server" style="margin-left: 15px"></asp:TextBox>
                         </p>
                         <p>
-                            <asp:Label ID="Label2" runat="server" Text="Capital de Pensión:"></asp:Label>
-                            <asp:TextBox ID="txtCapital" runat="server" style="margin-left: 8px"></asp:TextBox>
+                            <asp:Label ID="Label2" runat="server" Text="Capital de pensión:"></asp:Label>
+                            <asp:span class="SimboloColones">₡<asp:TextBox ID="txtCapital" runat="server" style="margin-left: 8px"></asp:TextBox></asp:span>
                         </p>
                         <p>
-                            <asp:Label ID="lblTasa" runat="server" Text="Tasa de Interés: "></asp:Label>
-                            <asp:DropDownList ID="DpDLtasaDeInteres" runat="server">
+                            <asp:Label ID="lblTasa" runat="server" Text="Tasa de interés técnica: "></asp:Label>
+                            &nbsp;&nbsp;<asp:DropDownList ID="DpDLtasaDeInteres" runat="server">
                                 <asp:ListItem>1%</asp:ListItem>
                                 <asp:ListItem>2%</asp:ListItem>
                                 <asp:ListItem Selected="True">3%</asp:ListItem>
                                 <asp:ListItem>4%</asp:ListItem>
                                 <asp:ListItem>5%</asp:ListItem>
                             </asp:DropDownList>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Label ID="lblMens" runat="server" Text="La tasa del 3% es la aprobada normativamente "></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Label ID="lblMens" runat="server" Text="La tasa de interés técnica es aprobada por la SUPEN, actualmente está fijada en 3%"></asp:Label>
                         </p>
                         <asp:Label ID="Label3" runat="server" Text="Sexo:"></asp:Label>
                         <asp:RadioButtonList ID="radioListSexo" runat="server">
@@ -74,7 +74,7 @@
                             <asp:Button ID="btnConsultar" runat="server" Text="Calcular" />
                         </p>
                         <p style="margin-left: 200px">
-                            <asp:Label ID="Label4" runat="server" Visible="false" Text="El monto estimado es:"></asp:Label>
+                            <asp:Label ID="Label4" runat="server" Visible="False" Text="El monto de estimado de la pension en la modalidad de retiro programado(ROP) es de:"></asp:Label>
                             <asp:TextBox ID="txtEstimado" runat="server" Visible="false" style="margin-left: 8px"></asp:TextBox>
                         </p>
                     </div>
