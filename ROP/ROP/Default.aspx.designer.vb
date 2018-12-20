@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class ROP
     
     '''<summary>
-    '''form1 control.
+    '''formulario control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents formulario As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
     '''ScriptManager1 control.
@@ -120,24 +120,6 @@ Partial Public Class ROP
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtTasa As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''lblP control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblP As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''lblMens control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblMens As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''RequiredFieldValidator3 control.
