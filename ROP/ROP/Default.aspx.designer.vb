@@ -122,6 +122,15 @@ Partial Public Class ROP
     Protected WithEvents txtTasa As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''lblP control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblP As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''RequiredFieldValidator3 control.
     '''</summary>
     '''<remarks>

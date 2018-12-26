@@ -39,12 +39,13 @@ Public Class ROP
         fechaCumpleanos1 = fechaCumpleanos1 + year1
         fechaCumpleanos2 = fechaCumpleanos2 + year2
 
-        Dim fechaActual As String = System.DateTime.Now.Date
-
-        Dim cantidadDias As Integer = DateDiff("d", fechaActual, fechaCumpleanos1)
+        Dim fechaActual As DateTime = System.DateTime.Now.Date
+        Dim cumpleanios As DateTime = DateTime.ParseExact(fechaCumpleanos1, "dd/MM/yyyy", Nothing)
+        Dim cumpleanios2 As DateTime = DateTime.ParseExact(fechaCumpleanos2, "dd/MM/yyyy", Nothing)
+        Dim cantidadDias As Integer = DateDiff("d", fechaActual, cumpleanios)
 
         If cantidadDias < 0 Then
-            cantidadDias = DateDiff("d", fechaActual, fechaCumpleanos2)
+            cantidadDias = DateDiff("d", fechaActual, cumpleanios2)
             If cantidadDias <= 182 Then
                 anio = anio - 1
                 dt = DAO.Get_qx(anio, sex)

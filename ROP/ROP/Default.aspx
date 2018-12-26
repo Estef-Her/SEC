@@ -66,12 +66,13 @@
 
                             <div class="col-75">
                                 <asp:TextBox ID="txtTasa" runat="server" class="input_txtTasa" input type="text"></asp:TextBox>
-                                <%--<asp:Label ID="lblP" runat="server" Text="%"></asp:Label>--%>
+                               
+                                <asp:Label ID="lblP" runat="server" Text="%"></asp:Label>
 
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                                 <div class="info">
-                                    <p><strong>Info: </strong>La tasa de interés técnica es aprobada por la SUPEN, actualmente está fijada en 3%</p>
+                                    <p><strong>Nota: </strong>La tasa de interés técnica es aprobada por la SUPEN, actualmente está fijada en 3%</p>
                                 </div>
                         
 
