@@ -1,14 +1,15 @@
 ﻿Imports System.Data
+Imports System.Configuration
 Imports Microsoft.VisualBasic
 Imports MySql.Data.MySqlClient
 
 
 
 Public Class DAO
-    Shared MysqlConn As MySqlConnection
     Shared COMMAND As MySqlCommand
     Shared READER As MySqlDataReader
-
+    Shared cS As String = ConfigurationManager.ConnectionStrings("MySqlConnectionString").ConnectionString
+    Shared MysqlConn As MySqlConnection
 
 
     'Funcion publica que recibe el año de nacimiento y el sexo, y retorna un data table con todos los qx'
@@ -16,7 +17,7 @@ Public Class DAO
 
         'En este string va todo lo necesario para conectarse a la base de datos, si es necesario cambiar el userid o el password aqui es'
         MysqlConn = New MySqlConnection With {
-            .ConnectionString = "server=localhost;userid=root;password=root;database=sec_des"
+            .ConnectionString = cS
         }
         Dim READER As MySqlDataReader
 
@@ -50,7 +51,7 @@ Public Class DAO
 
         'En este string va todo lo necesario para conectarse a la base de datos, si es necesario cambiar el userid o el password aqui es'
         MysqlConn = New MySqlConnection With {
-            .ConnectionString = "server=localhost;userid=root;password=root;database=sec_des"
+            .ConnectionString = cS
         }
         Dim READER As MySqlDataReader
 
@@ -84,7 +85,7 @@ Public Class DAO
 
         'En este string va todo lo necesario para conectarse a la base de datos, si es necesario cambiar el userid o el password aqui es'
         MysqlConn = New MySqlConnection With {
-            .ConnectionString = "server=localhost;userid=root;password=root;database=sec_des"
+            .ConnectionString = cS
         }
         Dim READER As MySqlDataReader
 
