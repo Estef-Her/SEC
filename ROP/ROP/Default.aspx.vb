@@ -1,129 +1,145 @@
-﻿
-Public Class ROP
+﻿Public Class ROP
     Inherits System.Web.UI.Page
     Dim Dao As DAO
 
-
-
-
-
     'Limpia/Resetea todos los campos'
-
-
+    Protected Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles botonLimpiar.Click
+        campoTextoNacimiento.Text = String.Empty
+        campoTextoCapital.Text = ""
+        campoTextoTasa.Text = ""
+        etiquetaVanuLarga.Visible = False
+        etiquetaVanuCorta.Visible = False
+        etiquetaRopLarga.Visible = False
+        etiquetaRopCorta.Visible = False
+    End Sub
 
     'Realiza el calculo del estimado'
-    Protected Sub BtnConsultar_Click(sender As Object, e As EventArgs) Handles btnConsultar.Click
+    Protected Sub BtnConsultar_Click(sender As Object, e As EventArgs) Handles botonCalcular.Click
 
         Dim anio As Integer
-        Dim sex As Integer
-        Dim dt As New DataTable
-        Dim tasa As Double = CDbl(txtTasa.Text) / 100
+        Dim sexo As Integer
+        Dim tablaDatos As New DataTable
+        Dim tasa As Double = CDbl(campoTextoTasa.Text) / 100
 
         'Convierte el texto del anio de nacimiento a integer'
-        Dim s As String = ""
+        Dim cadena As String = ""
 
         For index As Integer = 4 To 1 Step -1
-            s = s + txtNacim.Text.ElementAt(txtNacim.Text.Length - index)
+            cadena = cadena + campoTextoNacimiento.Text.ElementAt(campoTextoNacimiento.Text.Length - index)
         Next
 
-        anio = CInt(s)
+        anio = CInt(cadena)
 
-        sex = CInt(radioListSexo.SelectedValue)
+        sexo = CInt(listaSexo.SelectedValue)
 
-        Dim fechaCumpleanos1 As String = txtNacim.Text.Remove(6, 4)
-        Dim fechaCumpleanos2 As String = txtNacim.Text.Remove(6, 4)
-        Dim actualYear As Integer = System.DateTime.Now.Year
-        Dim nextYear As Integer = System.DateTime.Now.Year + 1
-        Dim year1 As String = CStr(actualYear)
-        Dim year2 As String = CStr(nextYear)
-        fechaCumpleanos1 = fechaCumpleanos1 + year1
-        fechaCumpleanos2 = fechaCumpleanos2 + year2
+        Dim primeraFecha As String = campoTextoNacimiento.Text.Remove(6, 4)
+        Dim segundaFecha As String = campoTextoNacimiento.Text.Remove(6, 4)
+        Dim anioActual As Integer = System.DateTime.Now.Year
+        Dim anioSiguiente As Integer = System.DateTime.Now.Year + 1
+        Dim primerAnio As String = CStr(anioActual)
+        Dim segundoAnio As String = CStr(anioSiguiente)
+        primeraFecha = primeraFecha + primerAnio
+        segundaFecha = segundaFecha + segundoAnio
 
         Dim fechaActual As DateTime = System.DateTime.Now.Date
-        Dim cumpleanios As DateTime = DateTime.ParseExact(fechaCumpleanos1, "dd/MM/yyyy", Nothing)
-        Dim cumpleanios2 As DateTime = DateTime.ParseExact(fechaCumpleanos2, "dd/MM/yyyy", Nothing)
-        Dim cantidadDias As Integer = DateDiff("d", fechaActual, cumpleanios)
+        Dim primerCumpleanios As DateTime = DateTime.ParseExact(primeraFecha, "dd/MM/yyyy", Nothing)
+        Dim segundoCumpleanios As DateTime = DateTime.ParseExact(segundaFecha, "dd/MM/yyyy", Nothing)
+        Dim cantidadDias As Integer = DateDiff("d", fechaActual, primerCumpleanios)
 
         If cantidadDias < 0 Then
-            cantidadDias = DateDiff("d", fechaActual, cumpleanios2)
+            cantidadDias = DateDiff("d", fechaActual, segundoCumpleanios)
             If cantidadDias <= 182 Then
                 anio = anio - 1
-                dt = DAO.Get_qx(anio, sex)
+                tablaDatos = DAO.Get_qx(anio, sexo)
             Else
-                dt = DAO.Get_qx(anio, sex)
+                tablaDatos = DAO.Get_qx(anio, sexo)
             End If
         Else
             If cantidadDias <= 182 Then
-                dt = DAO.Get_qx(anio, sex)
+                tablaDatos = DAO.Get_qx(anio, sexo)
             Else
-                anio = anio - 1
-                dt = DAO.Get_qx(anio, sex)
+                anio = anio + 1
+                tablaDatos = DAO.Get_qx(anio, sexo)
             End If
         End If
 
-        'Se procede a realizar un array de qx'
+        'Declaracion de variables esenciales'
 
-        Dim myArray(dt.Rows.Count + 1) As String
-        Dim i As Integer = 0
-        For Each dr As DataRow In dt.Rows
-            Dim myString = dt.Rows(i).Item(0)
-            myArray(i) = myString
-            i = i + 1
+        Dim iteracion As Integer = 0
+        Dim datoExtraido As String
+        Dim primerDato As Double = 0
+        Dim segundoDato As Double = 0
+        Dim tercerDato As Double = 0
+        Dim dato As Double = 0
+        Dim suma As Double = 0
+
+        'Se procede a realizar una tabla de probabilidad de muerte'
+
+        Dim tablaProbabilidadMuerte(tablaDatos.Rows.Count + 1) As String
+
+        For Each fila As DataRow In tablaDatos.Rows
+            datoExtraido = tablaDatos.Rows(iteracion).Item(0)
+            tablaProbabilidadMuerte(iteracion) = datoExtraido
+            iteracion = iteracion + 1
         Next
-        myArray(dt.Rows.Count) = "1"
+        tablaProbabilidadMuerte(tablaDatos.Rows.Count) = "1"
 
-        'Se procede a realizar un array de t'
+        'Se procede a realizar una tabla de periodo'
 
-        Dim arrayT(dt.Rows.Count + 1) As String
-        For j As Integer = 0 To dt.Rows.Count
-            arrayT(j) = CStr(j)
-        Next
-
-        'Se procede a realizar un array de tPx'
-
-        Dim arrayTPX(dt.Rows.Count + 1) As String
-        arrayTPX(0) = "1"
-        For x As Integer = 1 To dt.Rows.Count - 1
-            Dim dato1 = CDbl(arrayTPX(x - 1))
-            Dim dato2 = 1 - CDbl(myArray(x - 1))
-            Dim dato3 = dato1 * dato2
-            arrayTPX(x) = CStr(dato3)
-        Next
-        arrayTPX(dt.Rows.Count) = "0"
-
-        'Se procede a realizar un array de 1/(1+r)^t'
-        Dim arrayR(dt.Rows.Count + 1) As String
-        For y As Integer = 0 To dt.Rows.Count
-            Dim dato1 = 1 / (((1 + tasa)) ^ CInt(arrayT(y)))
-            arrayR(y) = CStr(dato1)
+        Dim tablaPeriodo(tablaDatos.Rows.Count + 1) As String
+        For iteracion = 0 To tablaDatos.Rows.Count
+            tablaPeriodo(iteracion) = CStr(iteracion)
         Next
 
-        'Se procede a realizar un array de multiplicacion'
-        Dim arrayM(dt.Rows.Count + 1) As String
-        For z As Integer = 0 To dt.Rows.Count
-            Dim dato1 = CDbl(arrayTPX(z)) * CDbl(arrayR(z))
-            arrayM(z) = CStr(dato1)
+        'Se procede a realizar una tabla de probabilidad de vida'
+
+        Dim tablaProbabilidadVida(tablaDatos.Rows.Count + 1) As String
+        tablaProbabilidadVida(0) = "1"
+        For iteracion = 1 To tablaDatos.Rows.Count - 1
+            primerDato = CDbl(tablaProbabilidadVida(iteracion - 1))
+            segundoDato = 1 - CDbl(tablaProbabilidadMuerte(iteracion - 1))
+            tercerDato = primerDato * segundoDato
+            tablaProbabilidadVida(iteracion) = CStr(tercerDato)
+        Next
+        tablaProbabilidadVida(tablaDatos.Rows.Count) = "0"
+
+        'Se procede a realizar una tabla de 1/(1+r)^t'
+
+        Dim tablaFormula(tablaDatos.Rows.Count + 1) As String
+        For iteracion = 0 To tablaDatos.Rows.Count
+            dato = 1 / (((1 + tasa)) ^ CDbl(tablaPeriodo(iteracion)))
+            tablaFormula(iteracion) = CStr(dato)
+        Next
+
+        'Se procede a realizar una tabla de multiplicacion'
+
+        Dim tablaMultiplicacion(tablaDatos.Rows.Count + 1) As String
+        For iteracion = 0 To tablaDatos.Rows.Count
+            dato = CDbl(tablaProbabilidadVida(iteracion)) * CDbl(tablaFormula(iteracion))
+            tablaMultiplicacion(iteracion) = CStr(dato)
         Next
 
         'Se realiza la sumatoria final'
-        Dim suma As Double = 0
-        For w As Integer = 0 To dt.Rows.Count
-            suma = suma + arrayM(w)
+
+        For iteracion = 0 To tablaDatos.Rows.Count
+            suma = suma + tablaMultiplicacion(iteracion)
         Next
 
         'Calculo VANU'
-        Dim VANU = 12 * (suma - (11 / 24))
 
+        Dim vanu As Double = 12 * (suma - (11 / 24))
 
         'Se realiza el calculo final'
-        Dim capital = CDbl(txtCapital.Text)
-        Dim resultadoF = capital / VANU
-        Dim resultadoFinal = FormatNumber(resultadoF, 2)
-        txtEstimado.Text = CStr("₡" + resultadoFinal)
-        Label4.Visible = True
-        txtEstimado.Visible = True
 
-
+        Dim capital As Double = CDbl(campoTextoCapital.Text)
+        Dim vanuFinal As String = FormatNumber(vanu, 4)
+        Dim resultado As Double = capital / vanu
+        Dim resultadoFinal As String = FormatNumber(resultado, 2)
+        etiquetaVanuCorta.Text = CStr(vanuFinal)
+        etiquetaRopCorta.Text = CStr("₡" + resultadoFinal)
+        etiquetaVanuLarga.Visible = True
+        etiquetaVanuCorta.Visible = True
+        etiquetaRopLarga.Visible = True
+        etiquetaRopCorta.Visible = True
     End Sub
-
 End Class
