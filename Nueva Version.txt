@@ -1,0 +1,2 @@
+Esta es la nueva versión del SEC.
+Se empieza a trabajar con clases y objetos
