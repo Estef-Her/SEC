@@ -8,10 +8,8 @@
     Dim anio As Integer
     Dim posicion As Integer
     Dim indice As Integer
-    Dim sumaRendimientos As Double
-    Dim sumaComisiones As Double
-    Dim resultado As Double
-    Dim resultadoFinal As String
+    Dim usuario As New Usuario
+    Dim calculadora As New CalculadoraRentaPermanente
 
     Protected Sub Text_Changed_R1(sender As Object, e As EventArgs)
         numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento1.Text))
@@ -224,22 +222,36 @@
     End Sub
 
     Protected Sub botonCalcular_Click(sender As Object, e As EventArgs) Handles botonCalcular.Click
-        sumaRendimientos = CDbl(rendimiento1.Text) + CDbl(rendimiento2.Text) + CDbl(rendimiento3.Text) +
-                           CDbl(rendimiento4.Text) + CDbl(rendimiento5.Text) + CDbl(rendimiento6.Text) +
-                           CDbl(rendimiento7.Text) + CDbl(rendimiento8.Text) + CDbl(rendimiento9.Text) +
-                           CDbl(rendimiento10.Text) + CDbl(rendimiento11.Text) + CDbl(rendimiento12.Text)
-
-        sumaComisiones = Math.Abs(CDbl(comision1.Text)) + Math.Abs(CDbl(comision2.Text)) + Math.Abs(CDbl(comision3.Text)) +
-                         Math.Abs(CDbl(comision4.Text)) + Math.Abs(CDbl(comision5.Text)) + Math.Abs(CDbl(comision6.Text)) +
-                         Math.Abs(CDbl(comision7.Text)) + Math.Abs(CDbl(comision8.Text)) + Math.Abs(CDbl(comision9.Text)) +
-                         Math.Abs(CDbl(comision10.Text)) + Math.Abs(CDbl(comision11.Text)) + Math.Abs(CDbl(comision12.Text))
-
-        resultado = (sumaRendimientos - sumaComisiones) / 12
-
-        resultadoFinal = FormatNumber(resultado, 2)
-
+        Dim arregloRendimientos(12) As Double
+        Dim arregloComisiones(12) As Double
+        arregloRendimientos(0) = CDbl(rendimiento1.Text)
+        arregloRendimientos(1) = CDbl(rendimiento2.Text)
+        arregloRendimientos(2) = CDbl(rendimiento3.Text)
+        arregloRendimientos(3) = CDbl(rendimiento4.Text)
+        arregloRendimientos(4) = CDbl(rendimiento5.Text)
+        arregloRendimientos(5) = CDbl(rendimiento6.Text)
+        arregloRendimientos(6) = CDbl(rendimiento7.Text)
+        arregloRendimientos(7) = CDbl(rendimiento8.Text)
+        arregloRendimientos(8) = CDbl(rendimiento9.Text)
+        arregloRendimientos(9) = CDbl(rendimiento10.Text)
+        arregloRendimientos(10) = CDbl(rendimiento11.Text)
+        arregloRendimientos(11) = CDbl(rendimiento12.Text)
+        arregloComisiones(0) = CDbl(comision1.Text)
+        arregloComisiones(1) = CDbl(comision2.Text)
+        arregloComisiones(2) = CDbl(comision3.Text)
+        arregloComisiones(3) = CDbl(comision4.Text)
+        arregloComisiones(4) = CDbl(comision5.Text)
+        arregloComisiones(5) = CDbl(comision6.Text)
+        arregloComisiones(6) = CDbl(comision7.Text)
+        arregloComisiones(7) = CDbl(comision8.Text)
+        arregloComisiones(8) = CDbl(comision9.Text)
+        arregloComisiones(9) = CDbl(comision10.Text)
+        arregloComisiones(10) = CDbl(comision11.Text)
+        arregloComisiones(11) = CDbl(comision12.Text)
+        usuario.cambiarRendimientos(arregloRendimientos)
+        usuario.cambiarComisiones(arregloComisiones)
         etiquetaLarga.Visible = True
-        etiquetaCorta.Text = "₡" + resultadoFinal
+        etiquetaCorta.Text = "₡" + FormatNumber(calculadora.calculo(usuario), 2)
         etiquetaCorta.Visible = True
     End Sub
 

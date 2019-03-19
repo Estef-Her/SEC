@@ -1,49 +1,29 @@
-﻿Public Class RetiroProgramado
+﻿Public Class CalculadoraRetiroProgramado
 
     'Definicion de Atributos'
-    Private fechaNacimiento As String
-    Private capitalPension As Integer
+
     Private tasaTecnica As Double
-    Private sexo As Integer
-    Private vanu As Double
 
     'Definicion de Metodos'
+
     Public Sub New()
-        Me.fechaNacimiento = ""
-        Me.capitalPension = 0
         Me.tasaTecnica = 0
-        Me.sexo = 0
-        Me.vanu = 0
-    End Sub
-
-    Public Sub cambiarFechaNacimiento(ByVal fecha As String)
-        fechaNacimiento = fecha
-    End Sub
-
-    Public Sub cambiarCapitalPension(ByVal capital As Integer)
-        capitalPension = capital
     End Sub
 
     Public Sub cambiarTasaTecnica(ByVal tasa As Double)
         tasaTecnica = tasa
     End Sub
 
-    Public Sub cambiarSexo(ByVal valor As Integer)
-        sexo = valor
-    End Sub
-
-    Public Sub cambiarVanu(ByVal v As Double)
-        vanu = v
-    End Sub
-
-    Public Function obtenerVanu() As Double
-        Return vanu
+    Public Function obtenerTasaTecnica() As Double
+        Return tasaTecnica
     End Function
 
-    Public Function calculoVANU() As Double
+    Public Function calculoVANU(ByVal usuario As Usuario) As Double
         Dim anio As Integer
         Dim tablaDatos As New DataTable
+        Dim fechaNacimiento As String = usuario.obtenerFechaNacimiento()
         Dim cadena As String = ""
+
 
         For index As Integer = 4 To 1 Step -1
             cadena = cadena + fechaNacimiento.ElementAt(fechaNacimiento.Length - index)
@@ -69,16 +49,16 @@
             cantidadDias = DateDiff("d", fechaActual, segundoCumpleanios)
             If cantidadDias <= 182 Then
                 anio = anio - 1
-                tablaDatos = DAO.Get_qx(anio, sexo)
+                tablaDatos = DAO.Get_qx(anio, usuario.obtenerSexo())
             Else
-                tablaDatos = DAO.Get_qx(anio, sexo)
+                tablaDatos = DAO.Get_qx(anio, usuario.obtenerSexo())
             End If
         Else
             If cantidadDias <= 182 Then
-                tablaDatos = DAO.Get_qx(anio, sexo)
+                tablaDatos = DAO.Get_qx(anio, usuario.obtenerSexo())
             Else
                 anio = anio + 1
-                tablaDatos = DAO.Get_qx(anio, sexo)
+                tablaDatos = DAO.Get_qx(anio, usuario.obtenerSexo())
             End If
         End If
 
@@ -149,8 +129,8 @@
         Return vanu
     End Function
 
-    Public Function calculo() As Double
-        Return capitalPension / VANU
+    Public Function calculo(ByVal usuario As Usuario) As Double
+        Return usuario.obtenerCapitalPension() / calculoVANU(usuario)
     End Function
 
 End Class
