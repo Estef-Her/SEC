@@ -7,6 +7,8 @@
     Private sexo As Integer
     Private rendimientos(12) As Double
     Private comisiones(12) As Double
+    Private salarioMensual As Double
+    Private montoAporte As Double
 
     'Definicion de Metodos'
 
@@ -14,6 +16,8 @@
         Me.fechaNacimiento = ""
         Me.capitalPension = 0
         Me.sexo = 0
+        Me.salarioMensual = 0
+        Me.montoAporte = 0
     End Sub
 
     Public Sub cambiarFechaNacimiento(ByVal fecha As String)
@@ -36,6 +40,14 @@
         comisiones = arregloComisiones
     End Sub
 
+    Public Sub cambiarSalarioMensual(ByVal salario As Double)
+        salarioMensual = salario
+    End Sub
+
+    Public Sub cambiarMontoAporte(ByVal monto As Double)
+        montoAporte = monto
+    End Sub
+
     Public Function obtenerFechaNacimiento() As String
         Return fechaNacimiento
     End Function
@@ -54,6 +66,14 @@
 
     Public Function obtenerComisiones() As Double()
         Return comisiones
+    End Function
+
+    Public Function obtenerSalarioMensual() As Double
+        Return salarioMensual
+    End Function
+
+    Public Function obtenerMontoAporte() As Double
+        Return montoAporte
     End Function
 
 End Class

@@ -119,7 +119,7 @@ Partial Public Class ROP
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents listaSexo As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents listaSexo As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
     '''botonCalcular control.

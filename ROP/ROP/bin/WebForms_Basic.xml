@@ -37,6 +37,375 @@ ROP
  Devuelve el objeto de registro Asp.
  </summary>
 </member>
+<member name="F:ROP.IncentivoFiscal._menuContent">
+<summary>
+menuContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._campoTextoSalario">
+<summary>
+campoTextoSalario control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._campoTextoAporte">
+<summary>
+campoTextoAporte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._botonCalcular">
+<summary>
+botonCalcular control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._botonLimpiar">
+<summary>
+botonLimpiar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._primeraEtiqueta">
+<summary>
+primeraEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._segundaEtiqueta">
+<summary>
+segundaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._terceraEtiqueta">
+<summary>
+terceraEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._cuartaEtiqueta">
+<summary>
+cuartaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._quintaEtiqueta">
+<summary>
+quintaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._sextaEtiqueta">
+<summary>
+sextaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._septimaEtiqueta">
+<summary>
+septimaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._octavaEtiqueta">
+<summary>
+octavaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._novenaEtiqueta">
+<summary>
+novenaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._decimaEtiqueta">
+<summary>
+decimaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._undecimaEtiqueta">
+<summary>
+undecimaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._duodecimaEtiqueta">
+<summary>
+duodecimaEtiqueta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaDoce">
+<summary>
+etiquetaDoce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaTrece">
+<summary>
+etiquetaTrece control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaCatorce">
+<summary>
+etiquetaCatorce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaQuince">
+<summary>
+etiquetaQuince control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaDieciseis">
+<summary>
+etiquetaDieciseis control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaDiecisiete">
+<summary>
+etiquetaDiecisiete control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaDieciocho">
+<summary>
+etiquetaDieciocho control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaDiecinueve">
+<summary>
+etiquetaDiecinueve control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeinte">
+<summary>
+etiquetaVeinte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeintiuno">
+<summary>
+etiquetaVeintiuno control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeintidos">
+<summary>
+etiquetaVeintidos control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeintitres">
+<summary>
+etiquetaVeintitres control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeinticuatro">
+<summary>
+etiquetaVeinticuatro control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaFaltante">
+<summary>
+etiquetaFaltante control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeinticinco">
+<summary>
+etiquetaVeinticinco control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeintiseis">
+<summary>
+etiquetaVeintiseis control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeintisiete">
+<summary>
+etiquetaVeintisiete control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeintiocho">
+<summary>
+etiquetaVeintiocho control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaVeintinueve">
+<summary>
+etiquetaVeintinueve control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaTreinta">
+<summary>
+etiquetaTreinta control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaTreintaiuno">
+<summary>
+etiquetaTreintaiuno control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaTreintaidos">
+<summary>
+etiquetaTreintaidos control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._etiquetaTreintaitres">
+<summary>
+etiquetaTreintaitres control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:ROP.RentaPermanente._menuContent">
 <summary>
 menuContent control.
@@ -67,6 +436,33 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:ROP.RentaPermanente._UpdatePanel1">
 <summary>
 UpdatePanel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.RentaPermanente._listaMeses">
+<summary>
+listaMeses control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.RentaPermanente._listaAnios">
+<summary>
+listaAnios control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.RentaPermanente._botonActualizar">
+<summary>
+botonActualizar control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -625,6 +1021,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:ROP.RentaPermanente._botonLimpiar">
 <summary>
 botonLimpiar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.RentaPermanente._botonDescargar">
+<summary>
+botonDescargar control.
 </summary>
 <remarks>
 Auto-generated field.

@@ -50,6 +50,33 @@ Partial Public Class RentaPermanente
     Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
+    '''listaMeses control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents listaMeses As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''listaAnios control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents listaAnios As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''botonActualizar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents botonActualizar As Global.System.Web.UI.HtmlControls.HtmlButton
+    
+    '''<summary>
     '''mes1 control.
     '''</summary>
     '''<remarks>
@@ -606,6 +633,15 @@ Partial Public Class RentaPermanente
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents botonLimpiar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''botonDescargar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents botonDescargar As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''etiquetaLarga control.

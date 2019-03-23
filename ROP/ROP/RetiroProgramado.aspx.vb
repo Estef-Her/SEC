@@ -25,7 +25,7 @@
         usuario.cambiarFechaNacimiento(campoTextoNacimiento.Text)
         usuario.cambiarCapitalPension(CInt(campoTextoCapital.Text))
         usuario.cambiarSexo(listaSexo.SelectedValue)
-        Dim tasa As Double = CDbl(campoTextoTasa.Text) / 100
+        Dim tasa As Double = CDbl(campoTextoTasa.Text)
         calculadora.cambiarTasaTecnica(tasa)
         Dim vanuFinal As String = FormatNumber(calculadora.calculoVANU(usuario), 4)
         Dim resultadoFinal As String = FormatNumber(calculadora.calculo(usuario), 2)
@@ -36,4 +36,5 @@
         etiquetaRopLarga.Visible = True
         etiquetaRopCorta.Visible = True
     End Sub
+
 End Class

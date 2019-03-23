@@ -14,7 +14,7 @@
         <link href="Content/style.css" rel="stylesheet" />
     </head>
     <body>
-        <div ID="menuContent" runat="server">
+        <div id="menuContent" runat="server">
             <!-- #Include virtual="~/MenuCalculadoras.aspx" -->
         </div>
         <div class="container">
@@ -30,7 +30,7 @@
 
                    <!--Fecha de nacimiento -->
 
-                   <asp:TextBox ID="campoTextoNacimiento" runat="server" input type="text" class="form-control" placeholder="Nacimiento (dd/mm/aaaa)" data-select="datepicker" AutoCompleteType="Disabled"></asp:TextBox>
+                   <asp:TextBox ID="campoTextoNacimiento" runat="server" class="form-control" placeholder="Nacimiento (dd/mm/aaaa)" data-select="datepicker" AutoCompleteType="Disabled"></asp:TextBox>
                        <p>
                         &nbsp;
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="campoTextoNacimiento" ErrorMessage="* Digite fecha de nacimiento " Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -40,7 +40,7 @@
                 
                     <div class="input-group">
                         <span class="input-group-addon">₡</span>
-                        <asp:TextBox ID="campoTextoCapital" runat="server" input type="text" class="input_txtCapital form-control" placeholder=" Capital de pensión" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed"></asp:TextBox>
+                        <asp:TextBox ID="campoTextoCapital" runat="server" class="input_txtCapital form-control" placeholder=" Capital de pensión" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed"></asp:TextBox>
                     </div>
                     <p>
                     &nbsp;
@@ -50,7 +50,7 @@
                     <!--Tasa de interés técnica -->
                     <div class="input-group">
                         <span class="input-group-addon">Tasa interés técnica</span>
-                        <asp:TextBox ID="campoTextoTasa" runat="server" input type="text" class="input_txtTasa form-control" AutoCompleteType="Disabled" Text="3"></asp:TextBox>
+                        <asp:TextBox ID="campoTextoTasa" runat="server" class="input_txtTasa form-control" AutoCompleteType="Disabled" Text="3"></asp:TextBox>
                         <span class="input-group-addon">%</span>
                     </div>
                     <p>
@@ -71,16 +71,15 @@
                     <br />
 
                     <!-- Género-->
-                    <div style="float:left;">
+                    <div style="float:none;">
                         <label>Sexo:</label>
+                        <asp:DropDownList runat="server" ID="listaSexo">
+                            <asp:ListItem Selected="True" Value="1">Masculino</asp:ListItem>
+                            <asp:ListItem Value="2">Femenino</asp:ListItem>
+                        </asp:DropDownList>
                     </div>
 
                     <br />
-                
-                    <asp:RadioButtonList ID="listaSexo" runat="server"  RepeatDirection="Vertical" RepeatLayout="Table" TextAlign="left" >
-                                    <asp:ListItem class="radio-inline" Selected="True" Value="1">Masculino</asp:ListItem>
-                                    <asp:ListItem class="radio-inline" Value="2">Femenino</asp:ListItem>
-                    </asp:RadioButtonList>
 
                     <br />
 

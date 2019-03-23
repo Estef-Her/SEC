@@ -143,6 +143,7 @@
     <Content Include="Content\style2.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\jquery.datepicker.css" />
+    <Content Include="IncentivoFiscal.aspx" />
     <Content Include="MenuCalculadoras.aspx" />
     <Content Include="RentaPermanente.aspx" />
     <Content Include="Scripts\jquery.datepicker.js" />
@@ -201,9 +202,18 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Data\DAO.vb" />
+    <Compile Include="CalculadoraIncentivoFiscal.vb" />
     <Compile Include="CalculadoraRentaPermanente.vb" />
+    <Compile Include="CalculadoraRetiroProgramado.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IncentivoFiscal.aspx.designer.vb">
+      <DependentUpon>IncentivoFiscal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncentivoFiscal.aspx.vb">
+      <DependentUpon>IncentivoFiscal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -231,7 +241,6 @@
       <DependentUpon>RentaPermanente.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="CalculadoraRetiroProgramado.vb" />
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>

@@ -4,12 +4,20 @@
     Dim numeroDigitado As String
     Dim meses(12) As String
     Dim fechas(12) As String
+    Dim otrosMeses(12) As String
+    Dim otrasFechas(12) As String
     Dim iteracion As Integer
     Dim anio As Integer
     Dim posicion As Integer
     Dim indice As Integer
     Dim usuario As New Usuario
     Dim calculadora As New CalculadoraRentaPermanente
+
+    Protected Sub cargandoAnios(sender As Object, e As EventArgs)
+        For item As Integer = 1950 To System.DateTime.Now.Year
+            listaAnios.Items.Add(CStr(item))
+        Next
+    End Sub
 
     Protected Sub Text_Changed_R1(sender As Object, e As EventArgs)
         numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento1.Text))
@@ -189,6 +197,108 @@
         mes10.Text = fechas(2)
         mes11.Text = fechas(1)
         mes12.Text = fechas(0)
+
+    End Sub
+
+    Protected Sub actualizarFechas(sender As Object, e As EventArgs)
+
+        otrosMeses(0) = "Enero"
+        otrosMeses(1) = "Febrero"
+        otrosMeses(2) = "Marzo"
+        otrosMeses(3) = "Abril"
+        otrosMeses(4) = "Mayo"
+        otrosMeses(5) = "Junio"
+        otrosMeses(6) = "Julio"
+        otrosMeses(7) = "Agosto"
+        otrosMeses(8) = "Septiembre"
+        otrosMeses(9) = "Octubre"
+        otrosMeses(10) = "Noviembre"
+        otrosMeses(11) = "Diciembre"
+
+        Dim s As String = listaMeses.SelectedValue
+        Dim c As String = listaAnios.SelectedValue
+        Dim i As Integer = 0
+
+        If s = "Enero" Then
+            i = 0
+        End If
+
+        If s = "Febrero" Then
+            i = 1
+        End If
+
+        If s = "Marzo" Then
+            i = 2
+        End If
+
+        If s = "Abril" Then
+            i = 3
+        End If
+
+        If s = "Mayo" Then
+            i = 4
+        End If
+
+        If s = "Junio" Then
+            i = 5
+        End If
+
+        If s = "Julio" Then
+            i = 6
+        End If
+
+        If s = "Agosto" Then
+            i = 7
+        End If
+
+        If s = "Septiembre" Then
+            i = 8
+        End If
+
+        If s = "Octubre" Then
+            i = 9
+        End If
+
+        If s = "Noviembre" Then
+            i = 10
+        End If
+
+        If s = "Diciembre" Then
+            i = 11
+        End If
+
+        Dim iteracion As Integer = 0
+        Dim contador As Integer = 0
+
+        For i = i To 11
+            otrasFechas(iteracion) = otrosMeses(i) + " " + c
+            iteracion = iteracion + 1
+            contador = contador + 1
+        Next
+
+        i = 0
+        c = CStr(CInt(c) + 1)
+
+        If contador <> 12 Then
+            Dim cantidadFaltante As Integer = 12 - contador - 1
+            For i = i To cantidadFaltante
+                otrasFechas(iteracion) = otrosMeses(i) + " " + c
+                iteracion = iteracion + 1
+            Next
+        End If
+
+        mes1.Text = otrasFechas(0)
+        mes2.Text = otrasFechas(1)
+        mes3.Text = otrasFechas(2)
+        mes4.Text = otrasFechas(3)
+        mes5.Text = otrasFechas(4)
+        mes6.Text = otrasFechas(5)
+        mes7.Text = otrasFechas(6)
+        mes8.Text = otrasFechas(7)
+        mes9.Text = otrasFechas(8)
+        mes10.Text = otrasFechas(9)
+        mes11.Text = otrasFechas(10)
+        mes12.Text = otrasFechas(11)
 
     End Sub
 

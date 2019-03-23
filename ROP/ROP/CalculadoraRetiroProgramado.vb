@@ -11,7 +11,7 @@
     End Sub
 
     Public Sub cambiarTasaTecnica(ByVal tasa As Double)
-        tasaTecnica = tasa
+        tasaTecnica = tasa / 100
     End Sub
 
     Public Function obtenerTasaTecnica() As Double
