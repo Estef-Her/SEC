@@ -92,7 +92,7 @@
                             </asp:DropDownList>
                             <label>Año:</label>
                             <asp:DropDownList runat="server" ID="listaAnios" OnLoad="cargandoAnios"></asp:DropDownList>
-                            <button id="botonActualizar" runat="server" onclick="actualizarFechas">Actualizar fechas</button>
+                            <asp:Button ID="botonActualizar" runat="server" CausesValidation="false" Text="Actualizar fechas" />
                         </div>
 
                         <h1 id="notaa">Digite los rendimientos y comisiones generados durante las fechas indicadas</h1>

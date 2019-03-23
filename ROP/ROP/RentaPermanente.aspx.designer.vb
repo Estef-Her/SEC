@@ -74,7 +74,7 @@ Partial Public Class RentaPermanente
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents botonActualizar As Global.System.Web.UI.HtmlControls.HtmlButton
+    Protected WithEvents botonActualizar As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''mes1 control.

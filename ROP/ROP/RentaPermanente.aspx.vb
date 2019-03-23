@@ -200,7 +200,7 @@
 
     End Sub
 
-    Protected Sub actualizarFechas(sender As Object, e As EventArgs)
+    Protected Sub actualizarFechas(sender As Object, e As EventArgs) Handles botonActualizar.Click
 
         otrosMeses(0) = "Enero"
         otrosMeses(1) = "Febrero"
