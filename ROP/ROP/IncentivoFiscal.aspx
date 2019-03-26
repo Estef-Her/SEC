@@ -15,7 +15,12 @@
             text-align:center;
         }*/
     </style>
-    <link href="Content/RVP.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet"/>
+    <script src="Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Scripts/jquery.validate.js"></script>
+    <script src="validation.js"></script>
+    
 </head>
 <body>
 
@@ -26,18 +31,21 @@
 
             <div class="container">
                 <div class="info"><h3>Cálculo estimado del incentivo fiscal de una pensión</h3></div>    
-            </div>
             
-            <form id="form1" runat="server" class="table-form register-form">
+            
+            <form id="form1" runat="server" class="table-form register-form form-horizontal">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+            <div class="form form-group">
 
-            <div class="form">
 
 
-
-            <asp:TextBox ID="campoTextoSalario" runat="server" placeholder="Salario mensual actual" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed"></asp:TextBox>
-            <br />
-            <asp:TextBox ID="campoTextoAporte" runat="server" placeholder="Aporte al plan voluntario" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed2"></asp:TextBox>
-            <br />
+            <asp:TextBox ID="campoTextoSalario" class="campoTextoSalario form-control" runat="server" placeholder="Salario mensual actual" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed"></asp:TextBox>
+            
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="campoTextoSalario" ErrorMessage="* Campo Requerido" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="campoTextoAporte" class="campoTextoAporte form-control" runat="server" placeholder="Aporte al plan voluntario" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed2"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="campoTextoAporte" ErrorMessage="* Campo Requerido" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
 
             <asp:Button ID="botonCalcular" runat="server" Text="Calcular" />
             <asp:Button ID="botonLimpiar" runat="server" Text="Limpiar datos" />
@@ -149,7 +157,9 @@
                 <br />
                 <asp:Label ID="etiquetaTreintaitres" runat="server" Visible="false" ForeColor="Black"></asp:Label>
         </div>
+                         </ContentTemplate>
+                </asp:UpdatePanel>
     </form>
-
+    </div>
 </body>
 </html>

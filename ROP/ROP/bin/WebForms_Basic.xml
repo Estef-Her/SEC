@@ -39,371 +39,407 @@ ROP
 </member>
 <member name="F:ROP.IncentivoFiscal._menuContent">
 <summary>
-menuContent control.
+Control menuContent.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._form1">
 <summary>
-form1 control.
+Control form1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._ScriptManager1">
+<summary>
+Control ScriptManager1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._UpdatePanel1">
+<summary>
+Control UpdatePanel1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._campoTextoSalario">
 <summary>
-campoTextoSalario control.
+Control campoTextoSalario.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._RequiredFieldValidator1">
+<summary>
+Control RequiredFieldValidator1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._campoTextoAporte">
 <summary>
-campoTextoAporte control.
+Control campoTextoAporte.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._RequiredFieldValidator2">
+<summary>
+Control RequiredFieldValidator2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._botonCalcular">
 <summary>
-botonCalcular control.
+Control botonCalcular.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._botonLimpiar">
 <summary>
-botonLimpiar control.
+Control botonLimpiar.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._primeraEtiqueta">
 <summary>
-primeraEtiqueta control.
+Control primeraEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._segundaEtiqueta">
 <summary>
-segundaEtiqueta control.
+Control segundaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._terceraEtiqueta">
 <summary>
-terceraEtiqueta control.
+Control terceraEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._cuartaEtiqueta">
 <summary>
-cuartaEtiqueta control.
+Control cuartaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._quintaEtiqueta">
 <summary>
-quintaEtiqueta control.
+Control quintaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._sextaEtiqueta">
 <summary>
-sextaEtiqueta control.
+Control sextaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._septimaEtiqueta">
 <summary>
-septimaEtiqueta control.
+Control septimaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._octavaEtiqueta">
 <summary>
-octavaEtiqueta control.
+Control octavaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._novenaEtiqueta">
 <summary>
-novenaEtiqueta control.
+Control novenaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._decimaEtiqueta">
 <summary>
-decimaEtiqueta control.
+Control decimaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._undecimaEtiqueta">
 <summary>
-undecimaEtiqueta control.
+Control undecimaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._duodecimaEtiqueta">
 <summary>
-duodecimaEtiqueta control.
+Control duodecimaEtiqueta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaDoce">
 <summary>
-etiquetaDoce control.
+Control etiquetaDoce.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaTrece">
 <summary>
-etiquetaTrece control.
+Control etiquetaTrece.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaCatorce">
 <summary>
-etiquetaCatorce control.
+Control etiquetaCatorce.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaQuince">
 <summary>
-etiquetaQuince control.
+Control etiquetaQuince.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaDieciseis">
 <summary>
-etiquetaDieciseis control.
+Control etiquetaDieciseis.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaDiecisiete">
 <summary>
-etiquetaDiecisiete control.
+Control etiquetaDiecisiete.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaDieciocho">
 <summary>
-etiquetaDieciocho control.
+Control etiquetaDieciocho.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaDiecinueve">
 <summary>
-etiquetaDiecinueve control.
+Control etiquetaDiecinueve.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeinte">
 <summary>
-etiquetaVeinte control.
+Control etiquetaVeinte.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeintiuno">
 <summary>
-etiquetaVeintiuno control.
+Control etiquetaVeintiuno.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeintidos">
 <summary>
-etiquetaVeintidos control.
+Control etiquetaVeintidos.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeintitres">
 <summary>
-etiquetaVeintitres control.
+Control etiquetaVeintitres.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeinticuatro">
 <summary>
-etiquetaVeinticuatro control.
+Control etiquetaVeinticuatro.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaFaltante">
 <summary>
-etiquetaFaltante control.
+Control etiquetaFaltante.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeinticinco">
 <summary>
-etiquetaVeinticinco control.
+Control etiquetaVeinticinco.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeintiseis">
 <summary>
-etiquetaVeintiseis control.
+Control etiquetaVeintiseis.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeintisiete">
 <summary>
-etiquetaVeintisiete control.
+Control etiquetaVeintisiete.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeintiocho">
 <summary>
-etiquetaVeintiocho control.
+Control etiquetaVeintiocho.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaVeintinueve">
 <summary>
-etiquetaVeintinueve control.
+Control etiquetaVeintinueve.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaTreinta">
 <summary>
-etiquetaTreinta control.
+Control etiquetaTreinta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaTreintaiuno">
 <summary>
-etiquetaTreintaiuno control.
+Control etiquetaTreintaiuno.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaTreintaidos">
 <summary>
-etiquetaTreintaidos control.
+Control etiquetaTreintaidos.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._etiquetaTreintaitres">
 <summary>
-etiquetaTreintaitres control.
+Control etiquetaTreintaitres.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:ROP.RentaPermanente._menuContent">

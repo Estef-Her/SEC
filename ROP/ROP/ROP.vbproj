@@ -140,12 +140,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrapValidator.min.css" />
     <Content Include="Content\style2.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\jquery.datepicker.css" />
     <Content Include="IncentivoFiscal.aspx" />
     <Content Include="MenuCalculadoras.aspx" />
     <Content Include="RentaPermanente.aspx" />
+    <Content Include="Scripts\bootstrap-validate.js" />
+    <Content Include="Scripts\bootstrapValidator.min.js" />
     <Content Include="Scripts\jquery.datepicker.js" />
     <Content Include="Scripts\jquery.datepicker.min.js" />
     <Content Include="Content\Site.css" />
@@ -169,6 +172,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
