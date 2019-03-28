@@ -173,3 +173,24 @@ $(function () {
         }
     });
 });
+
+$(function () {
+    $("#form1").validate({
+        rules: {
+            campoTextoSalario: { number: true },
+            campoTextoAporte: { number: true }
+        },
+        messages: {
+            'campoTextoSalario': {
+                number: jQuery('.campoTextoSalario').keypress(function (tecla) {
+                    if (31 < tecla.charCode && tecla.charCode < 44 || 44 < tecla.charCode && tecla.charCode < 48 || tecla.charCode > 57) return false;
+                })
+            },
+            'campoTextoAporte': {
+                number: jQuery('.campoTextoAporte').keypress(function (tecla) {
+                    if (31 < tecla.charCode && tecla.charCode < 46 || tecla.charCode > 57 || tecla.charCode == 47) return false;
+                })
+            },
+        }
+    });
+});

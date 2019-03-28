@@ -2,23 +2,23 @@
 
     'Definicion de Atributos'
 
-    Private tasaTecnica As Double
+    Private tasaInteres As Double
 
     'Definicion de Metodos'
 
     Public Sub New()
-        Me.tasaTecnica = 0
+        Me.tasaInteres = 0
     End Sub
 
-    Public Sub cambiarTasaTecnica(ByVal tasa As Double)
-        tasaTecnica = tasa / 100
+    Public Sub cambiarTasaInteres(ByVal tasa As Double)
+        tasaInteres = tasa / 100
     End Sub
 
-    Public Function obtenerTasaTecnica() As Double
-        Return tasaTecnica
+    Public Function obtenerTasaInteres() As Double
+        Return tasaInteres
     End Function
 
-    Public Function calculoVANU(ByVal usuario As Usuario) As Double
+    Public Function calculoVanu(ByVal usuario As Usuario) As Double
         Dim anio As Integer
         Dim tablaDatos As New DataTable
         Dim fechaNacimiento As String = usuario.obtenerFechaNacimiento()
@@ -106,7 +106,7 @@
 
         Dim tablaFormula(tablaDatos.Rows.Count + 1) As String
         For iteracion = 0 To tablaDatos.Rows.Count
-            dato = 1 / (((1 + tasaTecnica)) ^ CDbl(tablaPeriodo(iteracion)))
+            dato = 1 / (((1 + tasaInteres)) ^ CDbl(tablaPeriodo(iteracion)))
             tablaFormula(iteracion) = CStr(dato)
         Next
 
@@ -130,7 +130,7 @@
     End Function
 
     Public Function calculo(ByVal usuario As Usuario) As Double
-        Return usuario.obtenerCapitalPension() / calculoVANU(usuario)
+        Return usuario.obtenerCapitalPension() / calculoVanu(usuario)
     End Function
 
 End Class

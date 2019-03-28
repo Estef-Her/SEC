@@ -32,6 +32,24 @@ Partial Public Class IncentivoFiscal
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
+    '''ScriptManager1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+    
+    '''<summary>
+    '''UpdatePanel1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+    
+    '''<summary>
     '''campoTextoSalario control.
     '''</summary>
     '''<remarks>
@@ -41,6 +59,15 @@ Partial Public Class IncentivoFiscal
     Protected WithEvents campoTextoSalario As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''RequiredFieldValidator1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    
+    '''<summary>
     '''campoTextoAporte control.
     '''</summary>
     '''<remarks>
@@ -48,6 +75,15 @@ Partial Public Class IncentivoFiscal
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents campoTextoAporte As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''RequiredFieldValidator2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RequiredFieldValidator2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
     '''botonCalcular control.
@@ -176,33 +212,6 @@ Partial Public Class IncentivoFiscal
     Protected WithEvents duodecimaEtiqueta As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''etiquetaDoce control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents etiquetaDoce As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''etiquetaTrece control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents etiquetaTrece As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''etiquetaCatorce control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents etiquetaCatorce As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
     '''etiquetaQuince control.
     '''</summary>
     '''<remarks>
@@ -246,24 +255,6 @@ Partial Public Class IncentivoFiscal
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents etiquetaDiecinueve As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''etiquetaVeinte control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents etiquetaVeinte As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''etiquetaVeintiuno control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents etiquetaVeintiuno As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''etiquetaVeintidos control.

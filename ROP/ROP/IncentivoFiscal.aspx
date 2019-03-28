@@ -15,7 +15,12 @@
             text-align:center;
         }*/
     </style>
-    <link href="Content/RVP.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet"/>
+    <script src="Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Scripts/jquery.validate.js"></script>
+    <script src="validation.js"></script>
+    
 </head>
 <body>
 
@@ -26,21 +31,27 @@
 
             <div class="container">
                 <div class="info"><h3>Cálculo estimado del incentivo fiscal de una pensión</h3></div>    
-            </div>
             
-            <form id="form1" runat="server" class="table-form register-form">
-
-            <div class="form">
-
-
-
-            <asp:TextBox ID="campoTextoSalario" runat="server" placeholder="Salario mensual actual" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed"></asp:TextBox>
-            <br />
-            <asp:TextBox ID="campoTextoAporte" runat="server" placeholder="Aporte al plan voluntario" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed2"></asp:TextBox>
-            <br />
+            
+            <form id="form1" runat="server" class="table-form register-form form-horizontal">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                       
+            <div class="form form-group">
+            <div class="input-group">
+            <span class="input-group-addon">₡</span>
+            <asp:TextBox ID="campoTextoSalario" class="campoTextoSalario form-control" runat="server" placeholder="Salario bruto mensual" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed"></asp:TextBox>
+            </div>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="campoTextoSalario" ErrorMessage="* Digite salario bruto mensual" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                <div class="input-group">
+                <span class="input-group-addon">₡</span>
+            <asp:TextBox ID="campoTextoAporte" class="campoTextoAporte form-control" runat="server" placeholder="Aporte al plan voluntario" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed2"></asp:TextBox>
+                    </div>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="campoTextoAporte" ErrorMessage="* Digite aporte al plan voluntario" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
 
             <asp:Button ID="botonCalcular" runat="server" Text="Calcular" />
-            <asp:Button ID="botonLimpiar" runat="server" Text="Limpiar datos" />
+            <asp:Button ID="botonLimpiar" runat="server" Text="Limpiar datos" CausesValidation="false" />
 
             <br/>
             <br/>
@@ -50,7 +61,7 @@
                 <asp:Label ID="primeraEtiqueta" runat="server" Visible="false"><b>RESULTADOS</b></asp:Label>
                 <br />
                 <br />
-                <asp:Label ID="segundaEtiqueta" runat="server" Text="Monto máximo permitido que se puede exonerar" Visible="false"></asp:Label>
+                <asp:Label ID="segundaEtiqueta" runat="server" Text="Monto máximo permitido que se puede exonerar:" Visible="false"></asp:Label>
                 <br />
                 <br />
                 <b ID="terceraEtiqueta" runat="server" Visible="false">Sin Plan Voluntario</b>
@@ -65,7 +76,7 @@
 
                 <%--Cuarto--%>
 
-                    <asp:Label ID="septimaEtiqueta" runat="server" Text="Salario sobre el que se determinará el impuesto sobre la renta y las cargas sociales. Si el aporte es menor o igual al 10% del salario bruto, entonces puede exonerar la totalidad del aporte. Si no, solo puede exonerar el 10% del salario bruto" Visible="false"></asp:Label>
+                    <asp:Label ID="septimaEtiqueta" runat="server" Text="Salario sobre el que se determinará el impuesto sobre la renta y las cargas sociales. Si el aporte al plan voluntario es menor o igual al 10% del salario bruto mensual, entonces se puede exonerar la totalidad del aporte. De lo contario, solo se puede exonerar el 10% del salario bruto mensual:" Visible="false"></asp:Label>
                     <br />
                 <br />
                 <b ID="octavaEtiqueta" runat="server" Visible="false">Sin Plan Voluntario</b>
@@ -80,13 +91,7 @@
 
                     <%--Quinto--%>
 
-                    <asp:Label ID="duodecimaEtiqueta" runat="server" Text="Monto del impuesto sobre la renta (tramos de renta fijados por la administración tributaria)" Visible="false"></asp:Label>
-                    <br />
-                    <asp:Label ID="etiquetaDoce" runat="server" Text="15% sobre el exceso de ¢1,199,000.00" Visible="false"></asp:Label>
-                    <br />
-                    <asp:Label ID="etiquetaTrece" runat="server" Text="10% sobre el exceso de ¢799,000.00 y hasta ¢1,199,000.00" Visible="false"></asp:Label>
-                    <br />
-                    <asp:Label ID="etiquetaCatorce" runat="server" Text="0% hasta ¢799,000.00" Visible="false"></asp:Label>
+                    <asp:Label ID="duodecimaEtiqueta" runat="server" Text="Monto del impuesto sobre la renta. Los tramos de renta son fijados por la administración tributaria, por lo que se aplica un tramo de renta del 15% sobre el exceso de ¢1,199,000.00 de salario sobre impuestos, un tramo de renta del 10% sobre el exceso de ¢799,000.00 y hasta ¢1,199,000.00 de salario sobre impuestos y un tramo de renta del 0% hasta ¢799,000.00 de salario sobre impuestos:" Visible="false"></asp:Label>
                     <br />
                 <br />
                 <b ID="etiquetaQuince" runat="server" Visible="false">Sin Plan Voluntario</b>
@@ -101,11 +106,7 @@
 
                 <%--Sexto--%>
 
-                <asp:Label ID="etiquetaDiecinueve" runat="server" Text="Monto de las cargas sociales" Visible="false"></asp:Label>
-                <br />
-                <asp:Label ID="etiquetaVeinte" runat="server" Text="5,50% del Régimen de Enfermedad y Maternidad" Visible="false"></asp:Label>
-                <br />
-                <asp:Label ID="etiquetaVeintiuno" runat="server" Text="3,34% del Régimen de Invalidez, Vejez y Muerte" Visible="false"></asp:Label>
+                <asp:Label ID="etiquetaDiecinueve" runat="server" Text="Monto de las cargas sociales equivalente a la suma del 5,50% del salario sobre impuestos (Régimen de Enfermedad y Maternidad) y del 3,34% del salario sobre impuestos (Régimen de Invalidez, Vejez y Muerte):" Visible="false"></asp:Label>
                 <br />
                 <br />
                 <b ID="etiquetaVeintidos" runat="server" Visible="false">Sin Plan Voluntario</b>
@@ -119,7 +120,7 @@
                 <br />
 
                 <%--Setimo--%>
-                <asp:Label ID="etiquetaVeinticinco" runat="server" Text="Total que se debe pagar del impuesto sobre la renta y cargas sociales." Visible="false"></asp:Label>
+                <asp:Label ID="etiquetaVeinticinco" runat="server" Text="Total que se debe pagar del impuesto sobre la renta y las cargas sociales:" Visible="false"></asp:Label>
                 <br />
                 <br />
                 <b ID="etiquetaVeintiseis" runat="server" Visible="false">Sin Plan Voluntario</b>
@@ -134,7 +135,7 @@
 
                 <%--Octavo--%>
 
-                <asp:Label ID="etiquetaTreinta" runat="server" Text="Como se puede observar en los resultados anteriores, cuando se aporta a un plan voluntario se paga menos impuestos y cargas sociales" Visible="false"></asp:Label>
+                <asp:Label ID="etiquetaTreinta" runat="server" Text="Como se puede observar en los resultados anteriores, cuando se aporta a un plan voluntario se paga menos impuestos y cargas sociales. La diferencia es de aproximadamente:" Visible="false"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="etiquetaTreintaiuno" runat="server" Visible="false" ForeColor="Black"></asp:Label>
@@ -144,12 +145,14 @@
 
                 <%--Noveno--%>
 
-                <asp:Label ID="etiquetaTreintaidos" runat="server" Text="En conclusión, del aporte definido para el plan voluntario solo se tuvo que sacar del salario el monto producto de la resta del aporte y el pago de impuestos y cargas sociales" Visible="false"></asp:Label>
+                <asp:Label ID="etiquetaTreintaidos" runat="server" Text="En conclusión, del aporte definido para el plan voluntario solo se tuvo que sacar del salario el monto producto de la resta del aporte y el pago total de impuestos y cargas sociales:" Visible="false"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="etiquetaTreintaitres" runat="server" Visible="false" ForeColor="Black"></asp:Label>
         </div>
+                         </ContentTemplate>
+                </asp:UpdatePanel>
     </form>
-
+    </div>
 </body>
 </html>

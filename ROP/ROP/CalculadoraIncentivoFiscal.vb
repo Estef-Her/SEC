@@ -1,29 +1,29 @@
 ﻿Public Class CalculadoraIncentivoFiscal
 
     'Definicion de atributos'
-    Private porcentajeLimite As Double
+    Private porcentajeLimiteSalario As Double
     Private primerTramoRenta As Double
     Private segundoTramoRenta As Double
     Private tercerTramoRenta As Double
     Private primerLimiteRenta As Double
     Private segundoLimiteRenta As Double
-    Private primerMontoCarga As Double
-    Private segundoMontoCarga As Double
+    Private primerPorcentajeCargaSocial As Double
+    Private segundoPorcentajeCargaSocial As Double
 
     Public Sub New()
-        Me.porcentajeLimite = 10 / 100
+        Me.porcentajeLimiteSalario = 10 / 100
         Me.primerTramoRenta = 15 / 100
         Me.segundoTramoRenta = 10 / 100
         Me.tercerTramoRenta = 0
         Me.primerLimiteRenta = 799000.0
         Me.segundoLimiteRenta = 1199000.0
-        Me.primerMontoCarga = 5.5 / 100
-        Me.segundoMontoCarga = 3.34 / 100
+        Me.primerPorcentajeCargaSocial = 5.5 / 100
+        Me.segundoPorcentajeCargaSocial = 3.34 / 100
     End Sub
 
     'Definicion de metodos'
-    Public Sub cambiarPorcentajeLimite(ByVal porcentaje As Double)
-        porcentajeLimite = porcentaje / 100
+    Public Sub cambiarPorcentajeLimiteSalario(ByVal porcentaje As Double)
+        porcentajeLimiteSalario = porcentaje / 100
     End Sub
 
     Public Sub cambiarPrimerTramoRenta(ByVal tramo As Double)
@@ -46,16 +46,16 @@
         segundoLimiteRenta = limite
     End Sub
 
-    Public Sub cambiarPrimerMontoCarga(ByVal monto As Double)
-        primerMontoCarga = monto / 100
+    Public Sub cambiarPrimerPorcentajeCargaSocial(ByVal monto As Double)
+        primerPorcentajeCargaSocial = monto / 100
     End Sub
 
-    Public Sub cambiarSegundoMontoCarga(ByVal monto As Double)
-        segundoMontoCarga = monto / 100
+    Public Sub cambiarSegundoPorcentajeCargaSocial(ByVal monto As Double)
+        segundoPorcentajeCargaSocial = monto / 100
     End Sub
 
-    Public Function obtenerPorcentajeLimite() As Double
-        Return porcentajeLimite
+    Public Function obtenerPorcentajeLimiteSalario() As Double
+        Return porcentajeLimiteSalario
     End Function
 
     Public Function obtenerPrimerTramoRenta() As Double
@@ -78,50 +78,55 @@
         Return segundoLimiteRenta
     End Function
 
-    Public Function obtenerPrimerMontoCarga() As Double
-        Return primerMontoCarga
+    Public Function obtenerPrimerPorcentajeCargaSocial() As Double
+        Return primerPorcentajeCargaSocial
     End Function
 
-    Public Function obtenerSegundoMontoCarga() As Double
-        Return segundoMontoCarga
+    Public Function obtenerSegundoPorcentajeCargaSocial() As Double
+        Return segundoPorcentajeCargaSocial
     End Function
 
-    Public Function calculoMontoPorExonerar(ByVal usuario As Usuario) As Double
-        Return (usuario.obtenerSalarioMensual() * obtenerPorcentajeLimite())
+    Public Function calculoMontoMaximoPorExonerar(ByVal usuario As Usuario) As Double
+        Return (usuario.obtenerSalarioMensual() * obtenerPorcentajeLimiteSalario())
     End Function
 
-    Public Function calculoSalarioImpuestos(ByVal usuario As Usuario) As Double
+    Public Function calculoSalarioParaImpuestos(ByVal usuario As Usuario) As Double
         Dim salario As Double
 
-        If (usuario.obtenerSalarioMensual() * obtenerPorcentajeLimite()) > usuario.obtenerMontoAporte() Then
+        If (usuario.obtenerSalarioMensual() * obtenerPorcentajeLimiteSalario()) > usuario.obtenerMontoAporte() Then
             salario = usuario.obtenerSalarioMensual() - usuario.obtenerMontoAporte()
         Else
-            salario = usuario.obtenerSalarioMensual() - (usuario.obtenerSalarioMensual() * obtenerPorcentajeLimite())
+            salario = usuario.obtenerSalarioMensual() - (usuario.obtenerSalarioMensual() * obtenerPorcentajeLimiteSalario())
         End If
 
         Return salario
     End Function
 
     Public Function calculoMontoImpuestoRenta(ByVal valor As Double) As Double
+        Dim primerValor As Double = 0.00
+        Dim segundoValor As Double = 0.00
+        Dim tercerValor As Double = 0.00
         Dim monto As Double
 
         If valor <= obtenerPrimerLimiteRenta() Then
-            monto = valor * obtenerTercerTramoRenta()
+            primerValor = valor * obtenerTercerTramoRenta()
         End If
 
         If valor > obtenerPrimerLimiteRenta() And valor <= obtenerSegundoLimiteRenta() Then
-            monto = valor * obtenerSegundoTramoRenta()
+            segundoValor = valor * obtenerSegundoTramoRenta()
         End If
 
         If valor > obtenerSegundoLimiteRenta() Then
-            monto = valor * obtenerPrimerTramoRenta()
+            tercerValor = valor * obtenerPrimerTramoRenta()
         End If
+
+        monto = primerValor + segundoValor + tercerValor
 
         Return monto
     End Function
 
     Public Function calculoMontoCargasSociales(ByVal valor As Double) As Double
-        Return (valor * obtenerPrimerMontoCarga()) + (valor * obtenerSegundoMontoCarga())
+        Return (valor * obtenerPrimerPorcentajeCargaSocial()) + (valor * obtenerSegundoPorcentajeCargaSocial())
     End Function
 
     Public Function sumaTotalImpuestos(ByVal primerValor As Double, ByVal segundoValor As Double) As Double
@@ -132,7 +137,7 @@
         Return primerValor - segundoValor
     End Function
 
-    Public Function calculoFinal(ByVal valor As Double, ByVal usuario As Usuario) As Double
+    Public Function calculoProyeccion(ByVal valor As Double, ByVal usuario As Usuario) As Double
         Return usuario.obtenerMontoAporte() - valor
     End Function
 

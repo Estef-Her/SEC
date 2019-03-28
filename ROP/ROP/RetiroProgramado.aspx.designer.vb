@@ -41,15 +41,6 @@ Partial Public Class ROP
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
     
     '''<summary>
-    '''RegularExpressionValidator1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RegularExpressionValidator1 As Global.System.Web.UI.WebControls.RegularExpressionValidator
-    
-    '''<summary>
     '''UpdatePanel1 control.
     '''</summary>
     '''<remarks>
@@ -131,6 +122,15 @@ Partial Public Class ROP
     Protected WithEvents botonCalcular As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
+    '''botonLimpiar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents botonLimpiar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''etiquetaVanuLarga control.
     '''</summary>
     '''<remarks>
@@ -165,13 +165,4 @@ Partial Public Class ROP
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents etiquetaRopCorta As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''botonLimpiar control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents botonLimpiar As Global.System.Web.UI.WebControls.Button
 End Class

@@ -24,28 +24,26 @@
         <div class="form">
             <form id="form1" class="register-form" runat="server" >
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BorderColor="Red" ControlToValidate="campoTextoNacimiento" ErrorMessage="* Digite una fecha válida " Font-Italic="True" ForeColor="Red" ValidationExpression="([0][1-9]|[12][0-9]|3[01])(\/|-)([0][1-9]|[1][0-2])\2(\d{4})"></asp:RegularExpressionValidator>                
+                <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BorderColor="Red" ControlToValidate="campoTextoNacimiento" ErrorMessage="* Digite una fecha válida " Font-Italic="True" ForeColor="Red" ValidationExpression="([0][1-9]|[12][0-9]|3[01])(\/|-)([0][1-9]|[1][0-2])\2(\d{4})"></asp:RegularExpressionValidator> --%>               
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
 
                    <!--Fecha de nacimiento -->
-
+                   <div class="input-group">
                    <asp:TextBox ID="campoTextoNacimiento" runat="server" class="form-control" placeholder="Nacimiento (dd/mm/aaaa)" data-select="datepicker" AutoCompleteType="Disabled"></asp:TextBox>
-                       <p>
-                        &nbsp;
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="campoTextoNacimiento" ErrorMessage="* Digite fecha de nacimiento " Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
-                        &nbsp;</p>
+                   <span class="input-group-addon"></span>
+                   </div>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="campoTextoNacimiento" ErrorMessage="* Digite fecha de nacimiento " Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
 
                     <!--Capital de pensión -->
+                    
                 
                     <div class="input-group">
                         <span class="input-group-addon">₡</span>
                         <asp:TextBox ID="campoTextoCapital" runat="server" class="input_txtCapital form-control" placeholder=" Capital de pensión" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed"></asp:TextBox>
                     </div>
-                    <p>
-                    &nbsp;
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="campoTextoCapital" ErrorMessage="* Digite un capital de pensión" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
-                    </p>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="campoTextoCapital" ErrorMessage="* Digite un capital de pensión" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                  
 
                     <!--Tasa de interés técnica -->
                     <div class="input-group">
@@ -53,20 +51,14 @@
                         <asp:TextBox ID="campoTextoTasa" runat="server" class="input_txtTasa form-control" AutoCompleteType="Disabled" Text="3"></asp:TextBox>
                         <span class="input-group-addon">%</span>
                     </div>
-                    <p>
-                    &nbsp;
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="campoTextoTasa" ErrorMessage="* Digite una tasa de interés técnica" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
-                    </p>
-
-                    <br />
-
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="campoTextoTasa" ErrorMessage="* Digite una tasa de interés técnica" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
+                   
                     <div class="tasa">
                       <p><strong>Nota:</strong> La tasa de interés técnica es fijada por la SUPEN. Actualmente es del 3%</p>
                       <br />
                       <br /> 
                     </div>
 
-                    <br />
                     <br />
                     <br />
 
@@ -81,10 +73,15 @@
 
                     <br />
 
-                    <br />
 
                     <!--Boton Calcular -->
                     <asp:Button ID="botonCalcular" runat="server" Text="Calcular" />
+                    <br />
+              
+                    <!-- Boton de limpiar-->
+                    <asp:Button ID="botonLimpiar" runat="server" Text="Limpiar datos" CausesValidation="False" />
+                    <br />
+                    <br />
 
                     <!--Respuesta luego visible -->
           
@@ -94,9 +91,6 @@
                     <br />
                     <asp:Label ID="etiquetaRopLarga" runat="server" Visible="False" Text="En esta modalidad, el capital de pensión dividido entre el VANU da como resultado un monto estimado de pensión de: "></asp:Label>
                     <asp:Label ID="etiquetaRopCorta" runat="server" Visible="False" ForeColor="#000000" Width="30%" Font-Bold="true"></asp:Label>
-              
-                    <!-- Boton de limpiar-->
-                    <asp:Button ID="botonLimpiar" runat="server" Text="Limpiar datos" CausesValidation="False" />
 
                 </ContentTemplate>
                 </asp:UpdatePanel>
