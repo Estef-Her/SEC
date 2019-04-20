@@ -27,16 +27,11 @@
         decimaEtiqueta.Visible = False
         undecimaEtiqueta.Visible = False
         duodecimaEtiqueta.Visible = False
-        etiquetaDoce.Visible = False
-        etiquetaTrece.Visible = False
-        etiquetaCatorce.Visible = False
         etiquetaQuince.Visible = False
         etiquetaDieciseis.Visible = False
         etiquetaDiecisiete.Visible = False
         etiquetaDieciocho.Visible = False
         etiquetaDiecinueve.Visible = False
-        etiquetaVeinte.Visible = False
-        etiquetaVeintiuno.Visible = False
         etiquetaVeintidos.Visible = False
         etiquetaVeintitres.Visible = False
         etiquetaVeinticuatro.Visible = False
@@ -50,28 +45,28 @@
         etiquetaTreintaidos.Visible = False
         etiquetaTreintaitres.Visible = False
         etiquetaFaltante.Visible = False
-        campoTextoSalario.Text = ""
-        campoTextoAporte.Text = ""
+        campoTextoSalario.Text = String.Empty
+        campoTextoAporte.Text = String.Empty
     End Sub
 
     Protected Sub botonCalcular_Click(sender As Object, e As EventArgs) Handles botonCalcular.Click
         usuario.cambiarSalarioMensual(CDbl(campoTextoSalario.Text))
         usuario.cambiarMontoAporte(CDbl(campoTextoAporte.Text))
         cuartaEtiqueta.Text = "₡0.00"
-        sextaEtiqueta.Text = "₡" + FormatNumber(calculadora.calculoMontoPorExonerar(usuario), 2)
+        sextaEtiqueta.Text = "₡" + FormatNumber(calculadora.calculoMontoMaximoPorExonerar(usuario), 2)
         novenaEtiqueta.Text = "₡" + FormatNumber(usuario.obtenerSalarioMensual(), 2)
-        undecimaEtiqueta.Text = "₡" + FormatNumber(calculadora.calculoSalarioImpuestos(usuario))
+        undecimaEtiqueta.Text = "₡" + FormatNumber(calculadora.calculoSalarioParaImpuestos(usuario))
         etiquetaDieciseis.Text = "₡" + FormatNumber(calculadora.calculoMontoImpuestoRenta(usuario.obtenerSalarioMensual()))
-        etiquetaDieciocho.Text = "₡" + FormatNumber(calculadora.calculoMontoImpuestoRenta(calculadora.calculoSalarioImpuestos(usuario)), 2)
+        etiquetaDieciocho.Text = "₡" + FormatNumber(calculadora.calculoMontoImpuestoRenta(calculadora.calculoSalarioParaImpuestos(usuario)), 2)
         etiquetaVeintitres.Text = "₡" + FormatNumber(calculadora.calculoMontoCargasSociales(usuario.obtenerSalarioMensual()), 2)
-        etiquetaFaltante.Text = "₡" + FormatNumber(calculadora.calculoMontoCargasSociales(calculadora.calculoSalarioImpuestos(usuario)), 2)
+        etiquetaFaltante.Text = "₡" + FormatNumber(calculadora.calculoMontoCargasSociales(calculadora.calculoSalarioParaImpuestos(usuario)), 2)
         etiquetaVeintisiete.Text = "₡" + FormatNumber(calculadora.sumaTotalImpuestos(calculadora.calculoMontoImpuestoRenta(usuario.obtenerSalarioMensual()), calculadora.calculoMontoCargasSociales(usuario.obtenerSalarioMensual())), 2)
-        etiquetaVeintinueve.Text = "₡" + FormatNumber(calculadora.sumaTotalImpuestos(calculadora.calculoMontoImpuestoRenta(calculadora.calculoSalarioImpuestos(usuario)), calculadora.calculoMontoCargasSociales(calculadora.calculoSalarioImpuestos(usuario))), 2)
+        etiquetaVeintinueve.Text = "₡" + FormatNumber(calculadora.sumaTotalImpuestos(calculadora.calculoMontoImpuestoRenta(calculadora.calculoSalarioParaImpuestos(usuario)), calculadora.calculoMontoCargasSociales(calculadora.calculoSalarioParaImpuestos(usuario))), 2)
         Dim x As Double = calculadora.sumaTotalImpuestos(calculadora.calculoMontoImpuestoRenta(usuario.obtenerSalarioMensual()), calculadora.calculoMontoCargasSociales(usuario.obtenerSalarioMensual()))
-        Dim y As Double = calculadora.sumaTotalImpuestos(calculadora.calculoMontoImpuestoRenta(calculadora.calculoSalarioImpuestos(usuario)), calculadora.calculoMontoCargasSociales(calculadora.calculoSalarioImpuestos(usuario)))
+        Dim y As Double = calculadora.sumaTotalImpuestos(calculadora.calculoMontoImpuestoRenta(calculadora.calculoSalarioParaImpuestos(usuario)), calculadora.calculoMontoCargasSociales(calculadora.calculoSalarioParaImpuestos(usuario)))
         etiquetaTreintaiuno.Text = "₡" + FormatNumber(calculadora.diferenciaImpuestos(x, y), 2)
         Dim z = calculadora.diferenciaImpuestos(x, y)
-        etiquetaTreintaitres.Text = "₡" + FormatNumber(calculadora.calculoFinal(z, usuario), 2)
+        etiquetaTreintaitres.Text = "₡" + FormatNumber(calculadora.calculoProyeccion(z, usuario), 2)
         primeraEtiqueta.Visible = True
         segundaEtiqueta.Visible = True
         terceraEtiqueta.Visible = True
@@ -84,16 +79,11 @@
         decimaEtiqueta.Visible = True
         undecimaEtiqueta.Visible = True
         duodecimaEtiqueta.Visible = True
-        etiquetaDoce.Visible = True
-        etiquetaTrece.Visible = True
-        etiquetaCatorce.Visible = True
         etiquetaQuince.Visible = True
         etiquetaDieciseis.Visible = True
         etiquetaDiecisiete.Visible = True
         etiquetaDieciocho.Visible = True
         etiquetaDiecinueve.Visible = True
-        etiquetaVeinte.Visible = True
-        etiquetaVeintiuno.Visible = True
         etiquetaVeintidos.Visible = True
         etiquetaVeintitres.Visible = True
         etiquetaVeinticuatro.Visible = True

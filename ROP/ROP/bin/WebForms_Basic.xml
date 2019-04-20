@@ -73,6 +73,24 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:ROP.IncentivoFiscal._ScriptManager1">
+<summary>
+ScriptManager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._UpdatePanel1">
+<summary>
+UpdatePanel1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:ROP.IncentivoFiscal._campoTextoSalario">
 <summary>
 Control campoTextoSalario.
@@ -91,6 +109,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:ROP.IncentivoFiscal._RequiredFieldValidator1">
+<summary>
+RequiredFieldValidator1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:ROP.IncentivoFiscal._campoTextoAporte">
 <summary>
 Control campoTextoAporte.
@@ -107,6 +134,15 @@ Control RequiredFieldValidator2.
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:ROP.IncentivoFiscal._RequiredFieldValidator2">
+<summary>
+RequiredFieldValidator2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
 <member name="F:ROP.IncentivoFiscal._botonCalcular">
@@ -514,15 +550,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator1">
-<summary>
-RequiredFieldValidator1 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:ROP.RentaPermanente._rendimiento1">
 <summary>
 rendimiento1 control.
@@ -532,9 +559,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator2">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator1">
 <summary>
-RequiredFieldValidator2 control.
+RequiredFieldValidator1 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -550,18 +577,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes2">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator2">
 <summary>
-mes2 control.
+RequiredFieldValidator2 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator3">
+<member name="F:ROP.RentaPermanente._mes2">
 <summary>
-RequiredFieldValidator3 control.
+mes2 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -577,9 +604,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator4">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator3">
 <summary>
-RequiredFieldValidator4 control.
+RequiredFieldValidator3 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -595,18 +622,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes3">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator4">
 <summary>
-mes3 control.
+RequiredFieldValidator4 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator5">
+<member name="F:ROP.RentaPermanente._mes3">
 <summary>
-RequiredFieldValidator5 control.
+mes3 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -622,9 +649,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator6">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator5">
 <summary>
-RequiredFieldValidator6 control.
+RequiredFieldValidator5 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -640,18 +667,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes4">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator6">
 <summary>
-mes4 control.
+RequiredFieldValidator6 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator7">
+<member name="F:ROP.RentaPermanente._mes4">
 <summary>
-RequiredFieldValidator7 control.
+mes4 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -667,9 +694,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator16">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator7">
 <summary>
-RequiredFieldValidator16 control.
+RequiredFieldValidator7 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -685,18 +712,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes5">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator16">
 <summary>
-mes5 control.
+RequiredFieldValidator16 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator8">
+<member name="F:ROP.RentaPermanente._mes5">
 <summary>
-RequiredFieldValidator8 control.
+mes5 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -712,9 +739,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator17">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator8">
 <summary>
-RequiredFieldValidator17 control.
+RequiredFieldValidator8 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -730,18 +757,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes6">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator17">
 <summary>
-mes6 control.
+RequiredFieldValidator17 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator9">
+<member name="F:ROP.RentaPermanente._mes6">
 <summary>
-RequiredFieldValidator9 control.
+mes6 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -757,9 +784,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator18">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator9">
 <summary>
-RequiredFieldValidator18 control.
+RequiredFieldValidator9 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -775,18 +802,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes7">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator18">
 <summary>
-mes7 control.
+RequiredFieldValidator18 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator10">
+<member name="F:ROP.RentaPermanente._mes7">
 <summary>
-RequiredFieldValidator10 control.
+mes7 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -802,9 +829,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator19">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator10">
 <summary>
-RequiredFieldValidator19 control.
+RequiredFieldValidator10 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -820,18 +847,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes8">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator19">
 <summary>
-mes8 control.
+RequiredFieldValidator19 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator11">
+<member name="F:ROP.RentaPermanente._mes8">
 <summary>
-RequiredFieldValidator11 control.
+mes8 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -847,9 +874,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator20">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator11">
 <summary>
-RequiredFieldValidator20 control.
+RequiredFieldValidator11 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -865,18 +892,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes9">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator20">
 <summary>
-mes9 control.
+RequiredFieldValidator20 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator12">
+<member name="F:ROP.RentaPermanente._mes9">
 <summary>
-RequiredFieldValidator12 control.
+mes9 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -892,9 +919,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator21">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator12">
 <summary>
-RequiredFieldValidator21 control.
+RequiredFieldValidator12 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -910,18 +937,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes10">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator21">
 <summary>
-mes10 control.
+RequiredFieldValidator21 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator13">
+<member name="F:ROP.RentaPermanente._mes10">
 <summary>
-RequiredFieldValidator13 control.
+mes10 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -937,9 +964,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator22">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator13">
 <summary>
-RequiredFieldValidator22 control.
+RequiredFieldValidator13 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -955,18 +982,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes11">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator22">
 <summary>
-mes11 control.
+RequiredFieldValidator22 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator14">
+<member name="F:ROP.RentaPermanente._mes11">
 <summary>
-RequiredFieldValidator14 control.
+mes11 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -982,9 +1009,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator23">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator14">
 <summary>
-RequiredFieldValidator23 control.
+RequiredFieldValidator14 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1000,18 +1027,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._mes12">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator23">
 <summary>
-mes12 control.
+RequiredFieldValidator23 control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator15">
+<member name="F:ROP.RentaPermanente._mes12">
 <summary>
-RequiredFieldValidator15 control.
+mes12 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1027,9 +1054,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.RentaPermanente._RequiredFieldValidator24">
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator15">
 <summary>
-RequiredFieldValidator24 control.
+RequiredFieldValidator15 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1039,6 +1066,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:ROP.RentaPermanente._comision12">
 <summary>
 comision12 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:ROP.RentaPermanente._RequiredFieldValidator24">
+<summary>
+RequiredFieldValidator24 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -1180,15 +1216,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:ROP.ROP._RegularExpressionValidator1">
-<summary>
-RegularExpressionValidator1 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:ROP.ROP._UpdatePanel1">
 <summary>
 UpdatePanel1 control.
@@ -1270,6 +1297,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:ROP.ROP._botonLimpiar">
+<summary>
+botonLimpiar control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:ROP.ROP._etiquetaVanuLarga">
 <summary>
 etiquetaVanuLarga control.
@@ -1300,15 +1336,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:ROP.ROP._etiquetaRopCorta">
 <summary>
 etiquetaRopCorta control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:ROP.ROP._botonLimpiar">
-<summary>
-botonLimpiar control.
 </summary>
 <remarks>
 Auto-generated field.

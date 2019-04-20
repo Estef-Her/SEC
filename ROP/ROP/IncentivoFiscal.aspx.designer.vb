@@ -33,6 +33,25 @@ Partial Public Class IncentivoFiscal
     
     '''<summary>
     '''Control ScriptManager1.
+    '''ScriptManager1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+    
+    '''<summary>
+    '''UpdatePanel1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+    
+    '''<summary>
+    '''campoTextoSalario control.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -60,6 +79,16 @@ Partial Public Class IncentivoFiscal
     
     '''<summary>
     '''Control RequiredFieldValidator1.
+    '''RequiredFieldValidator1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    
+    '''<summary>
+    '''campoTextoAporte control.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -82,11 +111,17 @@ Partial Public Class IncentivoFiscal
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''RequiredFieldValidator2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents RequiredFieldValidator2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
     '''Control botonCalcular.
+    '''botonCalcular control.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -240,6 +275,7 @@ Partial Public Class IncentivoFiscal
     
     '''<summary>
     '''Control etiquetaQuince.
+    '''etiquetaQuince control.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
@@ -303,6 +339,7 @@ Partial Public Class IncentivoFiscal
     
     '''<summary>
     '''Control etiquetaVeintidos.
+    '''etiquetaVeintidos control.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.

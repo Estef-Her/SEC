@@ -12,7 +12,7 @@
     'Limpia/Resetea todos los campos'
     Protected Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles botonLimpiar.Click
         campoTextoNacimiento.Text = String.Empty
-        campoTextoCapital.Text = ""
+        campoTextoCapital.Text = String.Empty
         campoTextoTasa.Text = "3"
         etiquetaVanuLarga.Visible = False
         etiquetaVanuCorta.Visible = False
@@ -26,8 +26,8 @@
         usuario.cambiarCapitalPension(CInt(campoTextoCapital.Text))
         usuario.cambiarSexo(listaSexo.SelectedValue)
         Dim tasa As Double = CDbl(campoTextoTasa.Text)
-        calculadora.cambiarTasaTecnica(tasa)
-        Dim vanuFinal As String = FormatNumber(calculadora.calculoVANU(usuario), 4)
+        calculadora.cambiarTasaInteres(tasa)
+        Dim vanuFinal As String = FormatNumber(calculadora.calculoVanu(usuario), 4)
         Dim resultadoFinal As String = FormatNumber(calculadora.calculo(usuario), 2)
         etiquetaVanuCorta.Text = CStr(vanuFinal)
         etiquetaRopCorta.Text = CStr("₡" + resultadoFinal)
