@@ -14,129 +14,205 @@
     Dim calculadora As New CalculadoraRentaPermanente
 
     Protected Sub cargandoAnios(sender As Object, e As EventArgs)
-        For item As Integer = 1950 To System.DateTime.Now.Year
-            listaAnios.Items.Add(CStr(item))
-        Next
+        Try
+            For item As Integer = 1950 To System.DateTime.Now.Year
+                listaAnios.Items.Add(CStr(item))
+            Next
+        Catch ex As Exception
+        End Try
+
     End Sub
 
     Protected Sub Text_Changed_R1(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento1.Text))
-        rendimiento1.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento1.Text))
+            rendimiento1.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C1(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision1.Text))
-        comision1.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision1.Text))
+            comision1.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R2(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento2.Text))
-        rendimiento2.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento2.Text))
+            rendimiento2.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C2(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision2.Text))
-        comision2.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision2.Text))
+            comision2.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R3(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento3.Text))
-        rendimiento3.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento3.Text))
+            rendimiento3.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C3(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision3.Text))
-        comision3.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision3.Text))
+            comision3.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R4(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento4.Text))
-        rendimiento4.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento4.Text))
+            rendimiento4.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C4(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision4.Text))
-        comision4.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision4.Text))
+            comision4.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R5(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento5.Text))
-        rendimiento5.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento5.Text))
+            rendimiento5.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C5(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision5.Text))
-        comision5.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision5.Text))
+            comision5.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R6(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento6.Text))
-        rendimiento6.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento6.Text))
+            rendimiento6.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C6(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision6.Text))
-        comision6.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision6.Text))
+            comision6.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R7(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento7.Text))
-        rendimiento7.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento7.Text))
+            rendimiento7.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C7(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision7.Text))
-        comision7.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision7.Text))
+            comision7.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R8(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento8.Text))
-        rendimiento8.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento8.Text))
+            rendimiento8.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C8(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision8.Text))
-        comision8.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision8.Text))
+            comision8.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R9(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento9.Text))
-        rendimiento9.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento9.Text))
+            rendimiento9.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C9(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision9.Text))
-        comision9.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision9.Text))
+            comision9.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R10(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento10.Text))
-        rendimiento10.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento10.Text))
+            rendimiento10.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C10(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision10.Text))
-        comision10.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision10.Text))
+            comision10.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R11(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento11.Text))
-        rendimiento11.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento11.Text))
+            rendimiento11.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C11(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision11.Text))
-        comision11.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision11.Text))
+            comision11.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_R12(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento12.Text))
-        rendimiento12.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(rendimiento12.Text))
+            rendimiento12.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub Text_Changed_C12(sender As Object, e As EventArgs)
-        numeroDigitado = String.Format("{0:n2}", CDbl(comision12.Text))
-        comision12.Text = numeroDigitado
+        Try
+            numeroDigitado = String.Format("{0:n2}", CDbl(comision12.Text))
+            comision12.Text = numeroDigitado
+        Catch ex As Exception
+        End Try
     End Sub
 
     Protected Sub cargaFechasRecientes(sender As Object, e As EventArgs)
@@ -332,37 +408,41 @@
     End Sub
 
     Protected Sub botonCalcular_Click(sender As Object, e As EventArgs) Handles botonCalcular.Click
-        Dim arregloRendimientos(12) As Double
-        Dim arregloComisiones(12) As Double
-        arregloRendimientos(0) = CDbl(rendimiento1.Text)
-        arregloRendimientos(1) = CDbl(rendimiento2.Text)
-        arregloRendimientos(2) = CDbl(rendimiento3.Text)
-        arregloRendimientos(3) = CDbl(rendimiento4.Text)
-        arregloRendimientos(4) = CDbl(rendimiento5.Text)
-        arregloRendimientos(5) = CDbl(rendimiento6.Text)
-        arregloRendimientos(6) = CDbl(rendimiento7.Text)
-        arregloRendimientos(7) = CDbl(rendimiento8.Text)
-        arregloRendimientos(8) = CDbl(rendimiento9.Text)
-        arregloRendimientos(9) = CDbl(rendimiento10.Text)
-        arregloRendimientos(10) = CDbl(rendimiento11.Text)
-        arregloRendimientos(11) = CDbl(rendimiento12.Text)
-        arregloComisiones(0) = CDbl(comision1.Text)
-        arregloComisiones(1) = CDbl(comision2.Text)
-        arregloComisiones(2) = CDbl(comision3.Text)
-        arregloComisiones(3) = CDbl(comision4.Text)
-        arregloComisiones(4) = CDbl(comision5.Text)
-        arregloComisiones(5) = CDbl(comision6.Text)
-        arregloComisiones(6) = CDbl(comision7.Text)
-        arregloComisiones(7) = CDbl(comision8.Text)
-        arregloComisiones(8) = CDbl(comision9.Text)
-        arregloComisiones(9) = CDbl(comision10.Text)
-        arregloComisiones(10) = CDbl(comision11.Text)
-        arregloComisiones(11) = CDbl(comision12.Text)
-        usuario.cambiarRendimientos(arregloRendimientos)
-        usuario.cambiarComisiones(arregloComisiones)
-        etiquetaLarga.Visible = True
-        etiquetaCorta.Text = "₡" + FormatNumber(calculadora.calculo(usuario), 2)
-        etiquetaCorta.Visible = True
+        Try
+            Dim arregloRendimientos(12) As Double
+            Dim arregloComisiones(12) As Double
+            arregloRendimientos(0) = CDbl(rendimiento1.Text)
+            arregloRendimientos(1) = CDbl(rendimiento2.Text)
+            arregloRendimientos(2) = CDbl(rendimiento3.Text)
+            arregloRendimientos(3) = CDbl(rendimiento4.Text)
+            arregloRendimientos(4) = CDbl(rendimiento5.Text)
+            arregloRendimientos(5) = CDbl(rendimiento6.Text)
+            arregloRendimientos(6) = CDbl(rendimiento7.Text)
+            arregloRendimientos(7) = CDbl(rendimiento8.Text)
+            arregloRendimientos(8) = CDbl(rendimiento9.Text)
+            arregloRendimientos(9) = CDbl(rendimiento10.Text)
+            arregloRendimientos(10) = CDbl(rendimiento11.Text)
+            arregloRendimientos(11) = CDbl(rendimiento12.Text)
+            arregloComisiones(0) = CDbl(comision1.Text)
+            arregloComisiones(1) = CDbl(comision2.Text)
+            arregloComisiones(2) = CDbl(comision3.Text)
+            arregloComisiones(3) = CDbl(comision4.Text)
+            arregloComisiones(4) = CDbl(comision5.Text)
+            arregloComisiones(5) = CDbl(comision6.Text)
+            arregloComisiones(6) = CDbl(comision7.Text)
+            arregloComisiones(7) = CDbl(comision8.Text)
+            arregloComisiones(8) = CDbl(comision9.Text)
+            arregloComisiones(9) = CDbl(comision10.Text)
+            arregloComisiones(10) = CDbl(comision11.Text)
+            arregloComisiones(11) = CDbl(comision12.Text)
+            usuario.cambiarRendimientos(arregloRendimientos)
+            usuario.cambiarComisiones(arregloComisiones)
+            etiquetaLarga.Visible = True
+            etiquetaCorta.Text = "₡" + FormatNumber(calculadora.calculo(usuario), 2)
+            etiquetaCorta.Visible = True
+        Catch ex As Exception
+        End Try
+
     End Sub
 
 End Class
