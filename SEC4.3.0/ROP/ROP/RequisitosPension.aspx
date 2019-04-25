@@ -11,7 +11,6 @@
     <link href="Content/style.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="Scripts/jquery.validate.js"></script>
-    <script src="validation.js"></script>
 </head>
 <body>
         <div id="menuContent" runat="server">
@@ -24,7 +23,7 @@
        <div class="form">
         <form id="form1" class="register-form" runat="server">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-                <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BorderColor="Red" ControlToValidate="campoTextoNacimiento" ErrorMessage="* Digite una fecha válida " Font-Italic="True" ForeColor="Red" ValidationExpression="([0][1-9]|[12][0-9]|3[01])(\/|-)([0][1-9]|[1][0-2])\2(\d{4})"></asp:RegularExpressionValidator> --%>               
+                              
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
 

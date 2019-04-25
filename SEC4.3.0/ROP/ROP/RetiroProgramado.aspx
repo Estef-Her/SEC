@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <script src="Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="Scripts/jquery.validate.js"></script>
-        <script src="validation.js"></script>
         <title></title>
         <link rel="stylesheet" href="~/Content/jquery.datepicker.css"/>
         <link href="Content/bootstrap.css" rel="stylesheet" />

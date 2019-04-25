@@ -12,10 +12,13 @@
     End Sub
 
     Protected Sub botonCalcular_Click(sender As Object, e As EventArgs) Handles botonCalcular.Click
-        usuario.cambiarFechaNacimiento(campoTextoNacimiento.Text)
-        usuario.cambiarCotizaciones(CInt(campoNumerosCotizaciones.Text))
-        etiqueta.Text = calculadora.calculoCotizacionesContinuas(usuario)
-        etiqueta.Visible = True
+        Try
+            usuario.cambiarFechaNacimiento(campoTextoNacimiento.Text)
+            usuario.cambiarCotizaciones(CInt(campoNumerosCotizaciones.Text))
+            etiqueta.Text = calculadora.calculoCotizacionesContinuas(usuario)
+            etiqueta.Visible = True
+        Catch ex As Exception
+        End Try
     End Sub
 
 End Class
