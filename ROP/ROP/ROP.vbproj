@@ -140,11 +140,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrapValidator.min.css" />
     <Content Include="Content\style2.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\jquery.datepicker.css" />
+    <Content Include="IncentivoFiscal.aspx" />
     <Content Include="MenuCalculadoras.aspx" />
     <Content Include="RentaPermanente.aspx" />
+    <Content Include="Scripts\bootstrap-validate.js" />
+    <Content Include="Scripts\bootstrapValidator.min.js" />
     <Content Include="Scripts\jquery.datepicker.js" />
     <Content Include="Scripts\jquery.datepicker.min.js" />
     <Content Include="Content\Site.css" />
@@ -159,7 +163,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Default.aspx" />
+    <Content Include="RetiroProgramado.aspx" />
     <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -168,6 +172,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -201,8 +206,18 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Data\DAO.vb" />
+    <Compile Include="CalculadoraIncentivoFiscal.vb" />
+    <Compile Include="CalculadoraRentaPermanente.vb" />
+    <Compile Include="CalculadoraRetiroProgramado.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IncentivoFiscal.aspx.designer.vb">
+      <DependentUpon>IncentivoFiscal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncentivoFiscal.aspx.vb">
+      <DependentUpon>IncentivoFiscal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -237,6 +252,7 @@
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Usuario.vb" />
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,11 +267,11 @@
     <Compile Include="Site.Mobile.Master.designer.vb">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.designer.vb">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="RetiroProgramado.aspx.designer.vb">
+      <DependentUpon>RetiroProgramado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.vb">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="RetiroProgramado.aspx.vb">
+      <DependentUpon>RetiroProgramado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>

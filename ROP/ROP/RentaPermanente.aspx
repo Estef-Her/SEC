@@ -7,9 +7,9 @@
     <title></title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/style2.css" rel="stylesheet" />
-     <script src="Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="Scripts/jquery.validate.js"></script>
-        <script src="validation.js"></script>
+    <script src="Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Scripts/jquery.validate.js"></script>
+    <script src="validation.js"></script>
     <style type="text/css">
         /*.auto-style3 {
             width: 200px;
@@ -18,9 +18,44 @@
             width: 260px;
         }
 
-        #tabla{
+        #tabla {
             border-width: medium;
-            border-color: #808080;
+            border-color: #14487E;
+        }
+
+        #notaa {
+            text-align: center;
+            font-size: small
+        }
+
+        #titulo {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        #listaAnios {
+            margin-right: 8px;
+        }
+
+        #botonActualizar {
+            color: white;
+            background-color: #14487E;
+            border-color: #14487E;
+        }
+
+        #primerEncabezado {
+            background-color: #14487E;
+            color: white;
+        }
+
+        #segundoEncabezado {
+            background-color: #14487E;
+            color: white;
+        }
+
+        #tercerEncabezado {
+            background-color: #14487E;
+            color: whitesmoke;
         }
     </style>
 </head>
@@ -29,33 +64,60 @@
         <!-- #Include virtual="~/MenuCalculadoras.aspx" -->
     </div>
 
-    <div class="container">
-        <div class="info"><h3>Cálculo estimado de la renta permanente de una pensión</h3></div>
-    </div>
-
-    <h1 id="note">Digite los rendimientos y comisiones generados durante las fechas indicadas</h1>
-
     <div class="container-all">
         <div class="wrap-form">
             <form id="form1" runat="server" class="table-form register-form" onload="cargaFechasRecientes">
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
+
+                        <h3 id="titulo">Cálculo estimado de la renta permanente de una pensión</h3>
+                   
+
+                        <div style="text-align: center;">
+                            <label>Mes:</label>
+                            <asp:DropDownList runat="server" ID="listaMeses">
+                                <asp:ListItem Selected="True">Enero</asp:ListItem>
+                                <asp:ListItem>Febrero</asp:ListItem>
+                                <asp:ListItem>Marzo</asp:ListItem>
+                                <asp:ListItem>Abril</asp:ListItem>
+                                <asp:ListItem>Mayo</asp:ListItem>
+                                <asp:ListItem>Junio</asp:ListItem>
+                                <asp:ListItem>Julio</asp:ListItem>
+                                <asp:ListItem>Agosto</asp:ListItem>
+                                <asp:ListItem>Septiembre</asp:ListItem>
+                                <asp:ListItem>Octubre</asp:ListItem>
+                                <asp:ListItem>Noviembre</asp:ListItem>
+                                <asp:ListItem>Diciembre</asp:ListItem>
+                            </asp:DropDownList>
+                            <label>Año:</label>
+                            <asp:DropDownList runat="server" ID="listaAnios" OnLoad="cargandoAnios"></asp:DropDownList>
+                            <asp:Button ID="botonActualizar" runat="server" CausesValidation="false" Text="Actualizar fechas" />
+                        </div>
+
+                        <h1 id="notaa">Digite los rendimientos y comisiones generados durante las fechas indicadas</h1>
+
                         <table class="table table-sm" id="tabla" border="1">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col"><center>Fechas</center></th>
-                                    <th scope="col"><center>Rendimientos</center></th>
-                                    <th scope="col"><center>Comisiones</center></th>
+                                    <th scope="col" id="primerEncabezado">
+                                        <center>Fechas</center>
+                                    </th>
+                                    <th scope="col" id="segundoEncabezado">
+                                        <center>Rendimientos</center>
+                                    </th>
+                                    <th scope="col" id="tercerEncabezado">
+                                        <center>Comisiones</center>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes1" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes1" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rendimiento1" ErrorMessage="*" Font-Italic="True" ForeColor="Red" ></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rendimiento1" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
                                         <asp:TextBox ID="rendimiento1" runat="server" input type="text" class="rendimiento1 form-control" AutoCompleteType="Disabled" AutoPostBack="true" OnTextChanged="Text_Changed_R1"></asp:TextBox>
                                     </td>
                                     <td>
@@ -66,7 +128,7 @@
 
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes2" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes2" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="rendimiento2" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -79,7 +141,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes3" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes3" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rendimiento3" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -92,7 +154,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes4" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes4" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="rendimiento4" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -105,7 +167,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes5" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes5" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="rendimiento5" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -118,7 +180,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes6" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes6" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="rendimiento6" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -131,7 +193,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes7" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes7" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="rendimiento7" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -144,7 +206,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes8" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes8" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="rendimiento8" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -157,7 +219,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes9" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes9" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="rendimiento9" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -171,7 +233,7 @@
 
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes10" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes10" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="rendimiento10" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -184,7 +246,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes11" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes11" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="rendimiento11" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -197,7 +259,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="mes12" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                                        <center><asp:Label ID="mes12" runat="server" ForeColor="#000000" Font-Bold="true"></asp:Label></center>
                                     </td>
                                     <td class="auto-style4">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ControlToValidate="rendimiento12" ErrorMessage="*" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -214,24 +276,17 @@
                         </table>
 
 
-                            <div align="center">
-                                <asp:Button ID="botonCalcular" runat="server" Text="Calcular" width="20%"  />
-                                <asp:Button ID="botonLimpiar" runat="server" Text="Limpiar datos" width="20%" CausesValidation="False" />
-                                <br />
-                                <br />
-                                <asp:Label ID="etiquetaLarga" class="text-center" runat="server" Visible="False" Text="El monto mensual estimado de la pensión en esta modalidad, durante el presente año, es de: "></asp:Label>
-                                <asp:Label ID="etiquetaCorta" class="text-center" runat="server" Visible="False" ForeColor="#000000" Font-Bold="true"></asp:Label>
-                            </div>
-
-                     
-
-
-
-
-
-
-
-
+                        <div align="center">
+                            <asp:Button ID="botonCalcular" runat="server" Text="Calcular" Width="20%" />
+                            <br />
+                            <asp:Button ID="botonLimpiar" runat="server" Text="Limpiar datos" Width="20%" CausesValidation="False" />
+                            <br />
+                            <asp:Button ID="botonDescargar" runat="server" Text="Descargar" Width="20%" />
+                            <br />
+                            <br />
+                            <asp:Label ID="etiquetaLarga" class="text-center" runat="server" Visible="False" Text="El monto mensual estimado de la pensión en esta modalidad, durante el presente año, es de: "></asp:Label>
+                            <asp:Label ID="etiquetaCorta" class="text-center" runat="server" Visible="False" ForeColor="#000000" Font-Bold="true"></asp:Label>
+                        </div>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </form>
