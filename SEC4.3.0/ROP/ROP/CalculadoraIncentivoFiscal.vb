@@ -20,23 +20,39 @@
     Private segundoPorcentajeCargaSocial As Double
 
     Public Sub New()
-        Me.porcentajeLimiteSalario = 10 / 100
-        Me.primerTramoRentaAsalariado = 15 / 100
-        Me.segundoTramoRentaAsalariado = 10 / 100
-        Me.tercerTramoRentaAsalariado = 0
-        Me.primerLimiteRentaAsalariado = 817000.0
-        Me.segundoLimiteRentaAsalariado = 1226000.0
-        Me.primerTramoRentaIndependiente = 25 / 100
-        Me.segundoTramoRentaIndependiente = 20 / 100
-        Me.tercerTramoRentaIndependiente = 15 / 100
-        Me.cuartoTramoRentaIndependiente = 10 / 100
-        Me.quintoTramoRentaIndependiente = 0
-        Me.primerLimiteRentaIndependiente = 3628000.0
-        Me.segundoLimiteRentaIndependiente = 5418000.0
-        Me.tercerLimiteRentaIndependiente = 9038000.0
-        Me.cuartoLimiteRentaIndependiente = 18113000.0
-        Me.primerPorcentajeCargaSocial = 5.5 / 100
-        Me.segundoPorcentajeCargaSocial = 3.34 / 100
+        Double.TryParse(My.Resources.porcentajeLimiteSalario, porcentajeLimiteSalario)
+        Double.TryParse(My.Resources.primerTramoRentaAsalariado, primerTramoRentaAsalariado)
+        Double.TryParse(My.Resources.segundoTramoRentaAsalariado, segundoTramoRentaAsalariado)
+        Double.TryParse(My.Resources.tercerTramoRentaAsalariado, tercerTramoRentaAsalariado)
+        Double.TryParse(My.Resources.primerLimiteRentaAsalariado, primerLimiteRentaAsalariado)
+        Double.TryParse(My.Resources.segundoLimiteRentaAsalariado, segundoLimiteRentaAsalariado)
+        Double.TryParse(My.Resources.primerTramoRentaIndependiente, primerTramoRentaIndependiente)
+        Double.TryParse(My.Resources.segundoTramoRentaIndependiente, segundoTramoRentaIndependiente)
+        Double.TryParse(My.Resources.tercerTramoRentaIndependiente, tercerTramoRentaIndependiente)
+        Double.TryParse(My.Resources.cuartoTramoRentaIndependiente, cuartoTramoRentaIndependiente)
+        Double.TryParse(My.Resources.quintoTramoRentaIndependiente, quintoTramoRentaIndependiente)
+        Double.TryParse(My.Resources.primerLimiteRentaIndependiente, primerLimiteRentaIndependiente)
+        Double.TryParse(My.Resources.segundoLimiteRentaIndependiente, segundoLimiteRentaIndependiente)
+        Double.TryParse(My.Resources.tercerLimiteRentaIndependiente, tercerLimiteRentaIndependiente)
+        Double.TryParse(My.Resources.cuartoLimiteRentaIndependiente, cuartoLimiteRentaIndependiente)
+        Double.TryParse(My.Resources.primerPorcentajeCargaSocial, primerPorcentajeCargaSocial)
+        Double.TryParse(My.Resources.segundoPorcentajeCargaSocial, segundoPorcentajeCargaSocial)
+        'Me.primerTramoRentaAsalariado = 15 / 100
+        'Me.segundoTramoRentaAsalariado = 10 / 100
+        'Me.tercerTramoRentaAsalariado = 0
+        'Me.primerLimiteRentaAsalariado = 817000.0
+        'Me.segundoLimiteRentaAsalariado = 1226000.0
+        'Me.primerTramoRentaIndependiente = 25 / 100
+        'Me.segundoTramoRentaIndependiente = 20 / 100
+        'Me.tercerTramoRentaIndependiente = 15 / 100
+        'Me.cuartoTramoRentaIndependiente = 10 / 100
+        'Me.quintoTramoRentaIndependiente = 0
+        'Me.primerLimiteRentaIndependiente = 3628000.0
+        'Me.segundoLimiteRentaIndependiente = 5418000.0
+        'Me.tercerLimiteRentaIndependiente = 9038000.0
+        'Me.cuartoLimiteRentaIndependiente = 18113000.0
+        'Me.primerPorcentajeCargaSocial = 5.5 / 100
+        'Me.segundoPorcentajeCargaSocial = 3.34 / 100
     End Sub
 
     'Definicion de metodos'
